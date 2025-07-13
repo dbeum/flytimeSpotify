@@ -1,8 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/home.dart';
 import 'package:flytime_spotify/providers/selectedartist.dart';
-import 'package:flytime_spotify/tastepicker/podcastpicker.dart';
+
 import 'package:provider/provider.dart';
 
 class Artistpicker extends StatefulWidget {
@@ -758,7 +759,7 @@ class _ArtistpickerState extends State<Artistpicker> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => PodcastPicker()),
+                      MaterialPageRoute(builder: (context) => Home()),
                     );
                   },
                   child: Container(

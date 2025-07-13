@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bounceable: ^1.2.0
+  flutter_slider_drawer: ^3.0.2
   provider: ^6.1.5
 
 dev_dependencies:
@@ -42,3 +43,9 @@ flutter:
     - assets/images/travis.jpg
     - assets/images/doja.jpg
     - assets/images/tyga.jpg
+    - assets/images/a1.jpeg
+    - assets/images/a2.jpeg
+    - assets/images/a3.jpeg
+    - assets/images/a4.jpeg
+    - assets/images/a5.jpeg
+    - assets/images/rema1.jpeg

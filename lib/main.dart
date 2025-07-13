@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/home.dart';
 import 'package:flytime_spotify/tastepicker/artistpicker.dart';
 import 'package:flytime_spotify/providers/selectedartist.dart';
 import 'package:flytime_spotify/signup/login.dart';
