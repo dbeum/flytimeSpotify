@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "70895667538",
+    "project_id": "flytimespotify",
+    "storage_bucket": "flytimespotify.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70895667538:android:b667d6513bcefe95e2d28b",
+        "android_client_info": {
+          "package_name": "com.flytime.flytimeSpotify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALW4SahcyPXaNIcj2TxVWmRqilVILJP2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

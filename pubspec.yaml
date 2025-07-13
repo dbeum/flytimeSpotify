@@ -1,0 +1,44 @@
+name: flytime_spotify
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bounceable: ^1.2.0
+  provider: ^6.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/logo.png
+    - assets/images/google.png
+    - assets/images/apple.png
+    - assets/images/facebook.png
+    - assets/images/billie.jpg
+    - assets/images/ariana.jpg
+    - assets/images/bts.jpg
+    - assets/images/centralcee.jpg
+    - assets/images/dualipa.jpg
+    - assets/images/drake.jpg
+    - assets/images/ed.jpg
+    - assets/images/harry.jpg
+    - assets/images/jorja.jpg
+    - assets/images/lilwayne.jpg
+    - assets/images/olivia.jpg
+    - assets/images/rema.jpg
+    - assets/images/rihanna.jpg
+    - assets/images/uzi.jpg
+    - assets/images/weekend.jpg
+    - assets/images/travis.jpg
+    - assets/images/doja.jpg
+    - assets/images/tyga.jpg
