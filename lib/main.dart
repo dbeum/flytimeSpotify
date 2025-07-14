@@ -38,9 +38,9 @@ class MainApp extends StatelessWidget {
         scaffoldBackgroundColor: Color.fromARGB(255, 18, 18, 18),
         primarySwatch: Colors.deepOrange,
         textTheme: TextTheme(
-          bodyLarge: TextStyle(color: Colors.black),
-          bodyMedium: TextStyle(color: Colors.black),
-          bodySmall: TextStyle(color: Colors.black),
+          bodyLarge: TextStyle(color: Colors.white),
+          bodyMedium: TextStyle(color: Colors.white),
+          bodySmall: TextStyle(color: Colors.white),
         ),
         // Other theme settings...
       ),

@@ -14,7 +14,7 @@ class _SignupState extends State<Signup> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 18, 18, 18),
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: Color.fromARGB(255, 18, 18, 18)),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

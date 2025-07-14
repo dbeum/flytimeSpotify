@@ -52,7 +52,11 @@ class _Signup4State extends State<Signup4> {
       backgroundColor: Color.fromARGB(255, 18, 18, 18),
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Create account', style: TextStyle(fontSize: 16)),
+        title: Text(
+          'Create account',
+          style: TextStyle(fontSize: 16, color: Colors.white),
+        ),
+        backgroundColor: Color.fromARGB(255, 18, 18, 18),
       ),
       body: Column(
         children: [

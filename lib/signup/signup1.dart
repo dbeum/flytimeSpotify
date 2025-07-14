@@ -17,7 +17,11 @@ class _signup1State extends State<signup1> {
       backgroundColor: Color.fromARGB(255, 18, 18, 18),
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Create account', style: TextStyle(fontSize: 16)),
+        title: Text(
+          'Create account',
+          style: TextStyle(fontSize: 16, color: Colors.white),
+        ),
+        backgroundColor: Color.fromARGB(255, 18, 18, 18),
       ),
       body: Column(
         children: [
@@ -30,7 +34,7 @@ class _signup1State extends State<signup1> {
               Container(
                 width: 300,
                 height: 40,
-
+                padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   border: Border.all(width: 1, color: Colors.white),
                   color: const Color.fromARGB(199, 158, 158, 158),

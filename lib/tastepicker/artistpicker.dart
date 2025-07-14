@@ -34,7 +34,10 @@ class _ArtistpickerState extends State<Artistpicker> {
         centerTitle: true,
         backgroundColor: Colors.transparent,
 
-        title: Text(message, style: TextStyle(fontSize: 15)),
+        title: Text(
+          message,
+          style: TextStyle(fontSize: 15, color: Colors.white),
+        ),
 
         elevation: 0,
       ),
@@ -43,7 +46,7 @@ class _ArtistpickerState extends State<Artistpicker> {
           SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 60),
+                SizedBox(height: 120),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

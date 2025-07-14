@@ -7,6 +7,7 @@ environment:
   sdk: ^3.8.1
 
 dependencies:
+  carousel_slider: ^5.1.1
   flutter:
     sdk: flutter
   flutter_bounceable: ^1.2.0
@@ -48,4 +49,12 @@ flutter:
     - assets/images/a3.jpeg
     - assets/images/a4.jpeg
     - assets/images/a5.jpeg
+    - assets/images/b1.jpg
+    - assets/images/b2.jpg
+    - assets/images/b3.jpg
+    - assets/images/b4.jpg
+    - assets/images/c1.jpg
+    - assets/images/c2.jpg
+    - assets/images/c3.jpg
+    - assets/images/c4.jpg
     - assets/images/rema1.jpeg
