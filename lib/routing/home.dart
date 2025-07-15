@@ -284,13 +284,13 @@ class _HomeState extends State<Home> {
               child: Text(
                 'Your top mixes',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 25,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             Align(
               alignment: Alignment.topLeft,
 
@@ -303,7 +303,7 @@ class _HomeState extends State<Home> {
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
                   autoPlayAnimationDuration: Duration(milliseconds: 0),
-                  viewportFraction: 0.4,
+                  viewportFraction: 0.32,
                   initialPage: 1,
                 ),
                 items: [
@@ -352,20 +352,20 @@ class _HomeState extends State<Home> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             Container(
               alignment: Alignment.topLeft,
               padding: EdgeInsets.only(left: 25),
               child: Text(
                 'Jump back in',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 25,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             Align(
               alignment: Alignment.topLeft,
 
@@ -378,7 +378,7 @@ class _HomeState extends State<Home> {
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
                   autoPlayAnimationDuration: Duration(milliseconds: 0),
-                  viewportFraction: 0.4,
+                  viewportFraction: 0.32,
                   initialPage: 1,
                 ),
                 items: [
@@ -433,14 +433,14 @@ class _HomeState extends State<Home> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             Container(
               alignment: Alignment.topLeft,
               padding: EdgeInsets.only(left: 25),
               child: Text(
                 'Recents',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 25,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -459,7 +459,7 @@ class _HomeState extends State<Home> {
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
                   autoPlayAnimationDuration: Duration(milliseconds: 0),
-                  viewportFraction: 0.3,
+                  viewportFraction: 0.35,
                   initialPage: 1,
                 ),
                 items: [
@@ -524,13 +524,13 @@ class _HomeState extends State<Home> {
               child: Text(
                 'Best of artists',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 25,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             Align(
               alignment: Alignment.topLeft,
 
@@ -543,7 +543,7 @@ class _HomeState extends State<Home> {
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
                   autoPlayAnimationDuration: Duration(milliseconds: 0),
-                  viewportFraction: 0.4,
+                  viewportFraction: 0.32,
                   initialPage: 1,
                 ),
                 items: [

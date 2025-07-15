@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flytime_spotify/routing/home.dart';
+import 'package:flytime_spotify/routing/library.dart';
 import 'package:flytime_spotify/routing/search.dart';
+import 'package:flytime_spotify/routing/searchextended.dart';
 
 class h1 extends StatefulWidget {
   const h1({super.key});
@@ -12,13 +14,7 @@ class h1 extends StatefulWidget {
 class _h1State extends State<h1> {
   int _selectedIndex = 0;
 
-  final List<Widget> _screens = [
-    Home(),
-    Search(),
-    // LibraryScreen(),
-    // PodcastsScreen(),
-    // SettingsScreen(),
-  ];
+  final List<Widget> _screens = [Home(), Search(), Library()];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -48,7 +44,6 @@ class _h1State extends State<h1> {
             icon: Icon(Icons.library_music_outlined),
             label: 'Your Library',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Create'),
         ],
       ),
     );

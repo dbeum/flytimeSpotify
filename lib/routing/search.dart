@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/providers/selectedartist.dart';
+import 'package:flytime_spotify/routing/searchextended.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -27,22 +29,37 @@ class _SearchState extends State<Search> {
             SizedBox(height: 10),
             Container(
               height: 40,
-              width: 350,
-              padding: EdgeInsets.all(10),
+              width: 380,
+
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(5)),
                 color: Colors.white,
               ),
-              child: TextField(
-                cursorColor: Colors.white,
-                style: TextStyle(color: Colors.black),
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'What do you want to listen to?',
-                  hintStyle: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 13,
-                  ),
+              child: TextButton(
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    backgroundColor: Color.fromARGB(255, 18, 18, 18),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero,
+                    ),
+                    builder: (context) {
+                      return FractionallySizedBox(
+                        heightFactor: 1,
+                        child: Searchextended(),
+                      );
+                    },
+                  );
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "What do you want to listen to?",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -62,15 +79,17 @@ class _SearchState extends State<Search> {
               ),
               SizedBox(height: 10),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
                     height: 100,
-                    width: 170,
+                    width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.pink,
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
@@ -81,20 +100,21 @@ class _SearchState extends State<Search> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 72.5),
+
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
                   ),
-                  SizedBox(width: 32),
+
                   Container(
                     height: 100,
-                    width: 170,
+                    width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.green,
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
@@ -105,7 +125,7 @@ class _SearchState extends State<Search> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 56.5),
+
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
@@ -114,15 +134,17 @@ class _SearchState extends State<Search> {
               ),
               SizedBox(height: 20),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
                     height: 100,
-                    width: 170,
+                    width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.purple,
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
@@ -133,20 +155,21 @@ class _SearchState extends State<Search> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 33),
+
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
                   ),
-                  SizedBox(width: 32),
+
                   Container(
                     height: 100,
-                    width: 170,
+                    width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.deepPurpleAccent,
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
@@ -157,7 +180,7 @@ class _SearchState extends State<Search> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 17.5),
+
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
@@ -166,15 +189,17 @@ class _SearchState extends State<Search> {
               ),
               SizedBox(height: 20),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
                     height: 100,
-                    width: 170,
+                    width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.greenAccent,
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
@@ -185,20 +210,21 @@ class _SearchState extends State<Search> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 41.9),
+
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
                   ),
-                  SizedBox(width: 32),
+
                   Container(
                     height: 100,
-                    width: 170,
+                    width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.lightGreen,
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
@@ -209,7 +235,7 @@ class _SearchState extends State<Search> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 14.9),
+
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
@@ -218,15 +244,17 @@ class _SearchState extends State<Search> {
               ),
               SizedBox(height: 20),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
                     height: 100,
-                    width: 170,
+                    width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.red,
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
@@ -237,20 +265,21 @@ class _SearchState extends State<Search> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 84.1),
+
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
                   ),
-                  SizedBox(width: 32),
+
                   Container(
                     height: 100,
-                    width: 170,
+                    width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.blueAccent,
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
@@ -261,7 +290,7 @@ class _SearchState extends State<Search> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 54.15),
+
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
@@ -270,15 +299,17 @@ class _SearchState extends State<Search> {
               ),
               SizedBox(height: 20),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
                     height: 100,
-                    width: 170,
+                    width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.deepOrange,
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
@@ -289,20 +320,21 @@ class _SearchState extends State<Search> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 66.5),
+
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
                   ),
-                  SizedBox(width: 32),
+
                   Container(
                     height: 100,
-                    width: 170,
+                    width: 180,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.brown,
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           children: [
@@ -313,7 +345,7 @@ class _SearchState extends State<Search> {
                             ),
                           ],
                         ),
-                        SizedBox(width: 76.3),
+
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
