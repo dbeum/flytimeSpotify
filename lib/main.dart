@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/home.dart';
+import 'package:flytime_spotify/routes.dart';
+import 'package:flytime_spotify/routing/home.dart';
 import 'package:flytime_spotify/tastepicker/artistpicker.dart';
 import 'package:flytime_spotify/providers/selectedartist.dart';
 import 'package:flytime_spotify/signup/login.dart';
@@ -57,7 +58,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: Welcome(),
+      home: h1(),
       debugShowCheckedModeBanner: false,
     );
   }

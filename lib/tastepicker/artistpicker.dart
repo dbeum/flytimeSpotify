@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/home.dart';
+import 'package:flytime_spotify/routing/home.dart';
 import 'package:flytime_spotify/providers/selectedartist.dart';
 
 import 'package:provider/provider.dart';
