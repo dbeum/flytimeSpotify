@@ -92,7 +92,7 @@ class _SearchState extends State<Search> {
                     width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Colors.pink,
+                      color: Colors.green,
                     ),
                     child: Row(
                       children: [
@@ -120,7 +120,7 @@ class _SearchState extends State<Search> {
                     width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Colors.pink,
+                      color: Colors.purple,
                     ),
                     child: Row(
                       children: [
@@ -144,7 +144,7 @@ class _SearchState extends State<Search> {
                     width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Colors.pink,
+                      color: Colors.deepPurpleAccent,
                     ),
                     child: Row(
                       children: [
@@ -172,7 +172,7 @@ class _SearchState extends State<Search> {
                     width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Colors.pink,
+                      color: Colors.greenAccent,
                     ),
                     child: Row(
                       children: [
@@ -196,7 +196,7 @@ class _SearchState extends State<Search> {
                     width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Colors.pink,
+                      color: Colors.lightGreen,
                     ),
                     child: Row(
                       children: [
@@ -224,7 +224,7 @@ class _SearchState extends State<Search> {
                     width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Colors.pink,
+                      color: Colors.red,
                     ),
                     child: Row(
                       children: [
@@ -248,7 +248,7 @@ class _SearchState extends State<Search> {
                     width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Colors.pink,
+                      color: Colors.blueAccent,
                     ),
                     child: Row(
                       children: [
@@ -276,7 +276,7 @@ class _SearchState extends State<Search> {
                     width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Colors.pink,
+                      color: Colors.deepOrange,
                     ),
                     child: Row(
                       children: [
@@ -284,12 +284,12 @@ class _SearchState extends State<Search> {
                           children: [
                             SizedBox(height: 10),
                             Text(
-                              '  Music',
+                              '  Charts',
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
-                        SizedBox(width: 72.5),
+                        SizedBox(width: 66.5),
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
@@ -300,7 +300,7 @@ class _SearchState extends State<Search> {
                     width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: Colors.pink,
+                      color: Colors.brown,
                     ),
                     child: Row(
                       children: [
@@ -308,12 +308,12 @@ class _SearchState extends State<Search> {
                           children: [
                             SizedBox(height: 10),
                             Text(
-                              '  Music',
+                              '  Party',
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
-                        SizedBox(width: 72.5),
+                        SizedBox(width: 76.3),
                         Image.asset('assets/images/icon.png', height: 60),
                       ],
                     ),
