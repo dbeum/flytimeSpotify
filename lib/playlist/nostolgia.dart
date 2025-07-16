@@ -15,22 +15,33 @@ class _NostolgiaState extends State<Nostolgia> {
         child: Column(
           children: [
             Container(
-              // margin: EdgeInsets.all(20),
               height: 400,
 
-              //idth: 400,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(18)),
                 gradient: LinearGradient(
-                  colors: [Colors.deepPurple, Colors.black], // Gradient colors
-                  begin: Alignment.topLeft, // Start point
-                  end: Alignment.bottomRight, // End point
+                  colors: [
+                    Colors.deepPurple,
+                    Color.fromARGB(255, 18, 18, 18),
+                  ], // Gradient colors
+                  begin: Alignment.topCenter, // Start point
+                  end: Alignment.bottomCenter, // End point
                 ),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 80),
+                  SizedBox(height: 50),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.white,
+                      size: 23,
+                    ),
+                  ),
                   Center(
                     child: Container(
                       height: 200,
@@ -98,15 +109,38 @@ class _NostolgiaState extends State<Nostolgia> {
                 Row(
                   children: [
                     SizedBox(width: 20),
-                    Icon(Icons.logo_dev, color: Colors.grey),
-                    Icon(Icons.add_photo_alternate, color: Colors.grey),
+                    Icon(Icons.heat_pump_sharp, color: Colors.grey),
+                    SizedBox(width: 10),
+                    Container(
+                      height: 25,
+                      width: 25,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(360)),
+                        color: Color.fromARGB(255, 30, 215, 96),
+                      ),
+                      child: Icon(
+                        Icons.arrow_downward_rounded,
+                        color: Colors.black,
+                        size: 20,
+                      ),
+                    ),
+                    SizedBox(width: 10),
                     Icon(Icons.more_horiz, color: Colors.grey),
                   ],
                 ),
+
                 Row(
                   children: [
-                    Icon(Icons.shuffle),
-                    Icon(Icons.play_circle, size: 20),
+                    Icon(
+                      Icons.shuffle_rounded,
+                      color: Color.fromARGB(255, 30, 215, 96),
+                      size: 30,
+                    ),
+                    Icon(
+                      Icons.play_circle,
+                      size: 50,
+                      color: Color.fromARGB(255, 30, 215, 96),
+                    ),
                     SizedBox(width: 20),
                   ],
                 ),

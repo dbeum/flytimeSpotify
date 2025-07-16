@@ -59,7 +59,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: Nostolgia(),
+      home: h1(),
       debugShowCheckedModeBanner: false,
     );
   }

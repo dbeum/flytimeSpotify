@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/playlist/nostolgia.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -49,7 +50,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 120,
+                          width: MediaQuery.of(context).size.width * 0.32,
 
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
@@ -85,7 +86,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 120,
+                          width: MediaQuery.of(context).size.width * 0.32,
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
                             borderRadius: BorderRadius.only(
@@ -129,7 +130,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 120,
+                          width: MediaQuery.of(context).size.width * 0.32,
 
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
@@ -166,10 +167,17 @@ class _HomeState extends State<Home> {
                         width: 50,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Nostolgia(),
+                            ),
+                          );
+                        },
                         child: Container(
                           height: 50,
-                          width: 120,
+                          width: MediaQuery.of(context).size.width * 0.32,
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
                             borderRadius: BorderRadius.only(
@@ -209,7 +217,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 120,
+                          width: MediaQuery.of(context).size.width * 0.32,
 
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
@@ -249,7 +257,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 120,
+                          width: MediaQuery.of(context).size.width * 0.32,
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
                             borderRadius: BorderRadius.only(

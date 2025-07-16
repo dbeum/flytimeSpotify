@@ -83,7 +83,7 @@ class _SearchState extends State<Search> {
                 children: [
                   Container(
                     height: 100,
-                    width: 170,
+                    width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.pink,
@@ -108,7 +108,7 @@ class _SearchState extends State<Search> {
 
                   Container(
                     height: 100,
-                    width: 170,
+                    width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.green,
@@ -138,7 +138,7 @@ class _SearchState extends State<Search> {
                 children: [
                   Container(
                     height: 100,
-                    width: 170,
+                    width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.purple,
@@ -163,7 +163,7 @@ class _SearchState extends State<Search> {
 
                   Container(
                     height: 100,
-                    width: 170,
+                    width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.deepPurpleAccent,
@@ -193,7 +193,7 @@ class _SearchState extends State<Search> {
                 children: [
                   Container(
                     height: 100,
-                    width: 170,
+                    width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.greenAccent,
@@ -218,7 +218,7 @@ class _SearchState extends State<Search> {
 
                   Container(
                     height: 100,
-                    width: 170,
+                    width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.lightGreen,
@@ -248,7 +248,7 @@ class _SearchState extends State<Search> {
                 children: [
                   Container(
                     height: 100,
-                    width: 170,
+                    width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.red,
@@ -273,7 +273,7 @@ class _SearchState extends State<Search> {
 
                   Container(
                     height: 100,
-                    width: 170,
+                    width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.blueAccent,
@@ -303,7 +303,7 @@ class _SearchState extends State<Search> {
                 children: [
                   Container(
                     height: 100,
-                    width: 170,
+                    width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.deepOrange,
@@ -328,7 +328,7 @@ class _SearchState extends State<Search> {
 
                   Container(
                     height: 100,
-                    width: 170,
+                    width: MediaQuery.of(context).size.width * 0.45,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Colors.brown,
