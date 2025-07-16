@@ -22,7 +22,7 @@ class _SearchextendedState extends State<Searchextended> {
               children: [
                 Container(
                   height: 40,
-                  width: 320,
+                  width: MediaQuery.of(context).size.width * 0.7,
                   padding: EdgeInsets.only(left: 10, bottom: 7),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(5)),

@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 130,
+                          width: 120,
 
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
@@ -85,7 +85,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 130,
+                          width: 120,
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
                             borderRadius: BorderRadius.only(
@@ -129,7 +129,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 130,
+                          width: 120,
 
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
@@ -169,7 +169,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 130,
+                          width: 120,
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
                             borderRadius: BorderRadius.only(
@@ -209,7 +209,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 130,
+                          width: 120,
 
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
@@ -249,7 +249,7 @@ class _HomeState extends State<Home> {
                         onTap: () {},
                         child: Container(
                           height: 50,
-                          width: 130,
+                          width: 120,
                           decoration: BoxDecoration(
                             color: Color.fromARGB(255, 40, 40, 40),
                             borderRadius: BorderRadius.only(
@@ -284,7 +284,7 @@ class _HomeState extends State<Home> {
               child: Text(
                 'Your top mixes',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 22,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -296,34 +296,34 @@ class _HomeState extends State<Home> {
 
               child: CarouselSlider(
                 options: CarouselOptions(
-                  height: 155.0,
+                  height: 145.0,
                   //  autoPlay: true,
                   // enlargeCenterPage: true,
                   aspectRatio: 16 / 9,
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
                   autoPlayAnimationDuration: Duration(milliseconds: 0),
-                  viewportFraction: 0.32,
+                  viewportFraction: 0.34,
                   initialPage: 1,
                 ),
                 items: [
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/a5.jpeg', height: 130),
+                        Image.asset('assets/images/a5.jpeg', height: 110),
                         SizedBox(height: 5),
-                        Text('On Repeat', style: TextStyle(fontSize: 11)),
+                        Text('On Repeat', style: TextStyle(fontSize: 10)),
                       ],
                     ),
                   ),
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/a1.jpeg', height: 130),
+                        Image.asset('assets/images/a1.jpeg', height: 110),
                         SizedBox(height: 5),
                         Text(
                           'Olivia Rodrigo,Billie Eilish',
-                          style: TextStyle(fontSize: 11),
+                          style: TextStyle(fontSize: 10),
                         ),
                       ],
                     ),
@@ -331,20 +331,20 @@ class _HomeState extends State<Home> {
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/a2.jpeg', height: 130),
+                        Image.asset('assets/images/a2.jpeg', height: 110),
                         SizedBox(height: 5),
-                        Text('Omah Lay,Ruger', style: TextStyle(fontSize: 11)),
+                        Text('Omah Lay,Ruger', style: TextStyle(fontSize: 10)),
                       ],
                     ),
                   ),
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/a4.jpeg', height: 130),
+                        Image.asset('assets/images/a4.jpeg', height: 110),
                         SizedBox(height: 5),
                         Text(
                           'Nostalgic Rewind',
-                          style: TextStyle(fontSize: 11),
+                          style: TextStyle(fontSize: 10),
                         ),
                       ],
                     ),
@@ -359,7 +359,7 @@ class _HomeState extends State<Home> {
               child: Text(
                 'Jump back in',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 22,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -371,25 +371,25 @@ class _HomeState extends State<Home> {
 
               child: CarouselSlider(
                 options: CarouselOptions(
-                  height: 155.0,
+                  height: 145.0,
                   //  autoPlay: true,
                   // enlargeCenterPage: true,
                   aspectRatio: 16 / 9,
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
                   autoPlayAnimationDuration: Duration(milliseconds: 0),
-                  viewportFraction: 0.32,
+                  viewportFraction: 0.34,
                   initialPage: 1,
                 ),
                 items: [
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/b4.jpg', height: 130),
+                        Image.asset('assets/images/b4.jpg', height: 110),
                         SizedBox(height: 5),
                         Text(
                           'Dave,Central Cee',
-                          style: TextStyle(fontSize: 11),
+                          style: TextStyle(fontSize: 10),
                         ),
                       ],
                     ),
@@ -397,11 +397,11 @@ class _HomeState extends State<Home> {
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/b3.jpg', height: 130),
+                        Image.asset('assets/images/b3.jpg', height: 110),
                         SizedBox(height: 5),
                         Text(
                           'Torey Lanez,Lil Tecca',
-                          style: TextStyle(fontSize: 11),
+                          style: TextStyle(fontSize: 10),
                         ),
                       ],
                     ),
@@ -409,11 +409,11 @@ class _HomeState extends State<Home> {
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/b2.jpg', height: 130),
+                        Image.asset('assets/images/b2.jpg', height: 110),
                         SizedBox(height: 5),
                         Text(
                           'Wiley,Major Lazer',
-                          style: TextStyle(fontSize: 11),
+                          style: TextStyle(fontSize: 10),
                         ),
                       ],
                     ),
@@ -421,7 +421,7 @@ class _HomeState extends State<Home> {
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/b1.jpg', height: 130),
+                        Image.asset('assets/images/b1.jpg', height: 110),
                         SizedBox(height: 5),
                         Text(
                           'Tori Kelly,Sam Smith',
@@ -440,7 +440,7 @@ class _HomeState extends State<Home> {
               child: Text(
                 'Recents',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 22,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -524,7 +524,7 @@ class _HomeState extends State<Home> {
               child: Text(
                 'Best of artists',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 22,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -536,34 +536,34 @@ class _HomeState extends State<Home> {
 
               child: CarouselSlider(
                 options: CarouselOptions(
-                  height: 155.0,
+                  height: 145.0,
                   //  autoPlay: true,
                   // enlargeCenterPage: true,
                   aspectRatio: 16 / 9,
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
                   autoPlayAnimationDuration: Duration(milliseconds: 0),
-                  viewportFraction: 0.32,
+                  viewportFraction: 0.34,
                   initialPage: 1,
                 ),
                 items: [
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/c4.jpg', height: 130),
+                        Image.asset('assets/images/c4.jpg', height: 110),
                         SizedBox(height: 5),
-                        Text('This is Ckay', style: TextStyle(fontSize: 11)),
+                        Text('This is Ckay', style: TextStyle(fontSize: 10)),
                       ],
                     ),
                   ),
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/c3.jpg', height: 130),
+                        Image.asset('assets/images/c3.jpg', height: 110),
                         SizedBox(height: 5),
                         Text(
                           'This is Odumodubluck',
-                          style: TextStyle(fontSize: 11),
+                          style: TextStyle(fontSize: 10),
                         ),
                       ],
                     ),
@@ -571,11 +571,11 @@ class _HomeState extends State<Home> {
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/c2.jpg', height: 130),
+                        Image.asset('assets/images/c2.jpg', height: 110),
                         SizedBox(height: 5),
                         Text(
                           'This is Seyi Vibez',
-                          style: TextStyle(fontSize: 11),
+                          style: TextStyle(fontSize: 10),
                         ),
                       ],
                     ),
@@ -583,7 +583,7 @@ class _HomeState extends State<Home> {
                   Center(
                     child: Column(
                       children: [
-                        Image.asset('assets/images/c1.jpg', height: 130),
+                        Image.asset('assets/images/c1.jpg', height: 110),
                         SizedBox(height: 5),
                         Text('This is NSG', style: TextStyle(fontSize: 11)),
                       ],

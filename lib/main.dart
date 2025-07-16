@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/playlist/nostolgia.dart';
 import 'package:flytime_spotify/routes.dart';
 import 'package:flytime_spotify/routing/home.dart';
 import 'package:flytime_spotify/tastepicker/artistpicker.dart';
@@ -58,7 +59,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: h1(),
+      home: Nostolgia(),
       debugShowCheckedModeBanner: false,
     );
   }

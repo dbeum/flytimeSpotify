@@ -78,7 +78,7 @@ class _LibraryState extends State<Library> {
             SizedBox(height: 20),
             Row(
               children: [
-                Image.asset('assets/images/a5.jpeg', height: 80),
+                Image.asset('assets/images/a5.jpeg', height: 65),
                 SizedBox(width: 10),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +88,7 @@ class _LibraryState extends State<Library> {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 17,
+                        fontSize: 15,
                       ),
                     ),
                     Text('Playlist•user', style: TextStyle(color: Colors.grey)),
@@ -99,7 +99,7 @@ class _LibraryState extends State<Library> {
             SizedBox(height: 20),
             Row(
               children: [
-                Image.asset('assets/images/a1.jpeg', height: 80),
+                Image.asset('assets/images/a1.jpeg', height: 65),
                 SizedBox(width: 10),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,7 +109,7 @@ class _LibraryState extends State<Library> {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 17,
+                        fontSize: 15,
                       ),
                     ),
                     Text('Playlist•user', style: TextStyle(color: Colors.grey)),
@@ -120,7 +120,7 @@ class _LibraryState extends State<Library> {
             SizedBox(height: 20),
             Row(
               children: [
-                Image.asset('assets/images/a4.jpeg', height: 80),
+                Image.asset('assets/images/a4.jpeg', height: 65),
                 SizedBox(width: 10),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,7 +130,7 @@ class _LibraryState extends State<Library> {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 17,
+                        fontSize: 15,
                       ),
                     ),
                     Text('Playlist•user', style: TextStyle(color: Colors.grey)),

@@ -22,7 +22,7 @@ class _LibrarysearchState extends State<Librarysearch> {
               children: [
                 Container(
                   height: 40,
-                  width: 320,
+                  width: MediaQuery.of(context).size.width * 0.7,
                   padding: EdgeInsets.only(left: 10, bottom: 7),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -68,6 +68,7 @@ class _LibrarysearchState extends State<Librarysearch> {
                   SizedBox(height: 5),
                   Text(
                     'Search everything you\'ve saved,followed or created.',
+                    textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.grey),
                   ),
                 ],
