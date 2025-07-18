@@ -28,7 +28,7 @@ void main() {
       await tester.tap(find.byKey(Key('continuewithemailButton')));
       await tester.pumpAndSettle();
       //write email
-      expect(find.text('What\'s your email?'), findsOneWidget);
+      expect(find.text('Whats your email?'), findsOneWidget);
       await tester.enterText(find.byKey(Key('emailField')), 'test@example.com');
       expect(find.text('test@example.com'), findsOneWidget);
       await tester.tap(find.byKey(Key('nextButton')));
@@ -38,11 +38,11 @@ void main() {
       expect(find.text('Create a password?'), findsOneWidget);
       await tester.enterText(find.byKey(Key('passwordField')), 'password123');
       expect(find.text('password123'), findsOneWidget);
-      await tester.tap(find.byKey(Key('nextButton')));
+      await tester.tap(find.byKey(Key('nextButton2')));
       await tester.pumpAndSettle();
 
       //select gender
-      expect(find.text('What\'s your gender?'), findsOneWidget);
+      expect(find.text('Whats your gender?'), findsOneWidget);
       await tester.tap(find.byKey(Key('genderField')));
       await tester.pumpAndSettle();
       expect(find.text('Male'), findsOneWidget);
@@ -54,11 +54,11 @@ void main() {
 
       //choose dob
       expect(find.text('What\'s your date of birth?'), findsOneWidget);
-      await tester.tap(find.byKey(Key('dobField')));
+      await tester.tap(find.byKey(Key('dateField')));
       await tester.pumpAndSettle();
       await tester.tap(find.text('1'));
       await tester.pumpAndSettle();
-      await tester.tap(find.text('ok'));
+      await tester.tap(find.text('OK'));
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(Key('nextButton4')));
       await tester.pumpAndSettle();
@@ -70,7 +70,7 @@ void main() {
       await tester.tap(find.byKey(Key('checkbox1')));
       await tester.tap(find.byKey(Key('checkbox2')));
       await tester.tap(find.byKey(Key('nextButton5')));
-      await tester.pumpAndSettle();
+      await tester.pump();
     });
   });
 }
