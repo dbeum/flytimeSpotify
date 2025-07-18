@@ -46,7 +46,7 @@ class _Signup2State extends State<Signup2> {
                       child: TextField(
                         style: TextStyle(color: Colors.black),
                         keyboardType: TextInputType.visiblePassword,
-
+                        key: Key('passwordField'),
                         obscureText: provider.isvisible,
 
                         cursorColor: Colors.grey,

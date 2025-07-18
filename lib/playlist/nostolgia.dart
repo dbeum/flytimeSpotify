@@ -18,7 +18,10 @@ class _NostolgiaState extends State<Nostolgia> {
               height: 400,
 
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(18)),
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(18),
+                  bottomLeft: Radius.circular(18),
+                ),
                 gradient: LinearGradient(
                   colors: [
                     Colors.deepPurple,
@@ -86,10 +89,9 @@ class _NostolgiaState extends State<Nostolgia> {
                       ),
                     ],
                   ),
+                  SizedBox(height: 5),
                   Row(
                     children: [
-                      SizedBox(width: 10),
-                      Icon(Icons.web_rounded),
                       SizedBox(width: 10),
                       Text(
                         '3h14m',
@@ -109,8 +111,7 @@ class _NostolgiaState extends State<Nostolgia> {
                 Row(
                   children: [
                     SizedBox(width: 20),
-                    Icon(Icons.heat_pump_sharp, color: Colors.grey),
-                    SizedBox(width: 10),
+
                     Container(
                       height: 25,
                       width: 25,
@@ -123,6 +124,12 @@ class _NostolgiaState extends State<Nostolgia> {
                         color: Colors.black,
                         size: 20,
                       ),
+                    ),
+                    SizedBox(width: 10),
+                    Icon(
+                      Icons.person_add_outlined,
+                      color: Colors.grey,
+                      size: 30,
                     ),
                     SizedBox(width: 10),
                     Icon(Icons.more_horiz, color: Colors.grey),
@@ -155,13 +162,13 @@ class _NostolgiaState extends State<Nostolgia> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/a5.jpeg', height: 50),
+                          Image.asset('assets/images/n1.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Beautiful Creatures',
+                                'What is Love',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -169,7 +176,7 @@ class _NostolgiaState extends State<Nostolgia> {
                                 ),
                               ),
                               Text(
-                                'her shawty',
+                                'Janelle Monae',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,
@@ -188,13 +195,13 @@ class _NostolgiaState extends State<Nostolgia> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/a5.jpeg', height: 50),
+                          Image.asset('assets/images/n2.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Beautiful Creatures',
+                                'The Shoop Shoop Song',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -202,7 +209,7 @@ class _NostolgiaState extends State<Nostolgia> {
                                 ),
                               ),
                               Text(
-                                'her shawty',
+                                'Betty Everett',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,
@@ -221,13 +228,13 @@ class _NostolgiaState extends State<Nostolgia> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/a5.jpeg', height: 50),
+                          Image.asset('assets/images/n3.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Beautiful Creatures',
+                                'Boyfriend',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -235,7 +242,7 @@ class _NostolgiaState extends State<Nostolgia> {
                                 ),
                               ),
                               Text(
-                                'her shawty',
+                                'Big Time Rush',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,
@@ -248,106 +255,6 @@ class _NostolgiaState extends State<Nostolgia> {
                       Icon(Icons.more_horiz, color: Colors.grey),
                     ],
                   ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset('assets/images/a5.jpeg', height: 50),
-                          SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Beautiful Creatures',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Text(
-                                'her shawty',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 10,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Icon(Icons.more_horiz, color: Colors.grey),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset('assets/images/a5.jpeg', height: 50),
-                          SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Beautiful Creatures',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Text(
-                                'her shawty',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 10,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Icon(Icons.more_horiz, color: Colors.grey),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset('assets/images/a5.jpeg', height: 50),
-                          SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Beautiful Creatures',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Text(
-                                'her shawty',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 10,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Icon(Icons.more_horiz, color: Colors.grey),
-                    ],
-                  ),
-                  SizedBox(height: 10),
                 ],
               ),
             ),

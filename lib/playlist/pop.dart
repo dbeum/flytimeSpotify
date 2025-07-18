@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Onrepeat extends StatefulWidget {
-  const Onrepeat({super.key});
+class Pop extends StatefulWidget {
+  const Pop({super.key});
 
   @override
-  State<Onrepeat> createState() => _OnrepeatState();
+  State<Pop> createState() => _PopState();
 }
 
-class _OnrepeatState extends State<Onrepeat> {
+class _PopState extends State<Pop> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +24,7 @@ class _OnrepeatState extends State<Onrepeat> {
                 ),
                 gradient: LinearGradient(
                   colors: [
-                    Colors.blueAccent,
+                    Colors.pinkAccent,
                     Color.fromARGB(255, 18, 18, 18),
                   ], // Gradient colors
                   begin: Alignment.topCenter, // Start point
@@ -50,13 +50,13 @@ class _OnrepeatState extends State<Onrepeat> {
                       height: 200,
                       width: 200,
                       color: Colors.transparent,
-                      child: Image.asset('assets/images/a5.jpeg'),
+                      child: Image.asset('assets/images/b1.jpg'),
                     ),
                   ),
                   SizedBox(height: 20),
 
                   Text(
-                    '  Nostalgic Rewind',
+                    '  Pop Mix',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   Row(
@@ -94,7 +94,7 @@ class _OnrepeatState extends State<Onrepeat> {
                     children: [
                       SizedBox(width: 10),
                       Text(
-                        '3h14m',
+                        '1h1m',
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.bold,
@@ -162,13 +162,79 @@ class _OnrepeatState extends State<Onrepeat> {
                     children: [
                       Row(
                         children: [
+                          Image.asset('assets/images/p1.jpeg', height: 50),
+                          SizedBox(width: 10),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'NO',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Text(
+                                'Meghan Trainor',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Icon(Icons.more_horiz, color: Colors.grey),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset('assets/images/p2.jpeg', height: 50),
+                          SizedBox(width: 10),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'What Was I Made For?',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Text(
+                                'Billie Eilish',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Icon(Icons.more_horiz, color: Colors.grey),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
                           Image.asset('assets/images/o2.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'drivers license',
+                                'Brutal',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -177,72 +243,6 @@ class _OnrepeatState extends State<Onrepeat> {
                               ),
                               Text(
                                 'Olivia Rodrigo',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 10,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Icon(Icons.more_horiz, color: Colors.grey),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset('assets/images/n2.jpeg', height: 50),
-                          SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'The Shoop Shoop Song',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Text(
-                                'Betty Everett',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 10,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Icon(Icons.more_horiz, color: Colors.grey),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset('assets/images/n3.jpeg', height: 50),
-                          SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Boyfriend',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Text(
-                                'Big Time Rush',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,

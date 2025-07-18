@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Onrepeat extends StatefulWidget {
-  const Onrepeat({super.key});
+class Chill extends StatefulWidget {
+  const Chill({super.key});
 
   @override
-  State<Onrepeat> createState() => _OnrepeatState();
+  State<Chill> createState() => _ChillState();
 }
 
-class _OnrepeatState extends State<Onrepeat> {
+class _ChillState extends State<Chill> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +24,7 @@ class _OnrepeatState extends State<Onrepeat> {
                 ),
                 gradient: LinearGradient(
                   colors: [
-                    Colors.blueAccent,
+                    Colors.brown,
                     Color.fromARGB(255, 18, 18, 18),
                   ], // Gradient colors
                   begin: Alignment.topCenter, // Start point
@@ -50,13 +50,13 @@ class _OnrepeatState extends State<Onrepeat> {
                       height: 200,
                       width: 200,
                       color: Colors.transparent,
-                      child: Image.asset('assets/images/a5.jpeg'),
+                      child: Image.asset('assets/images/a2.jpeg'),
                     ),
                   ),
                   SizedBox(height: 20),
 
                   Text(
-                    '  Nostalgic Rewind',
+                    '  Chill Mix',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   Row(
@@ -94,7 +94,7 @@ class _OnrepeatState extends State<Onrepeat> {
                     children: [
                       SizedBox(width: 10),
                       Text(
-                        '3h14m',
+                        '1h4m',
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.bold,
@@ -162,13 +162,13 @@ class _OnrepeatState extends State<Onrepeat> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/o2.jpeg', height: 50),
+                          Image.asset('assets/images/ch1.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'drivers license',
+                                'let.go.my.hand',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -176,7 +176,7 @@ class _OnrepeatState extends State<Onrepeat> {
                                 ),
                               ),
                               Text(
-                                'Olivia Rodrigo',
+                                'J.Cole,Bas,6lack',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,
@@ -195,13 +195,13 @@ class _OnrepeatState extends State<Onrepeat> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/n2.jpeg', height: 50),
+                          Image.asset('assets/images/ch2.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'The Shoop Shoop Song',
+                                'Venus',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -209,7 +209,7 @@ class _OnrepeatState extends State<Onrepeat> {
                                 ),
                               ),
                               Text(
-                                'Betty Everett',
+                                'Faceless,Serotonin',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,
@@ -228,13 +228,13 @@ class _OnrepeatState extends State<Onrepeat> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/n3.jpeg', height: 50),
+                          Image.asset('assets/images/ch3.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Boyfriend',
+                                'Chosen',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -242,7 +242,40 @@ class _OnrepeatState extends State<Onrepeat> {
                                 ),
                               ),
                               Text(
-                                'Big Time Rush',
+                                'Blxst,Tyga,Ty Dolla \$ign',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Icon(Icons.more_horiz, color: Colors.grey),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset('assets/images/ch4.jpeg', height: 50),
+                          SizedBox(width: 10),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'LUV',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Text(
+                                'Tory Lanez',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,

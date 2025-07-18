@@ -40,6 +40,7 @@ class _signup1State extends State<signup1> {
                   color: const Color.fromARGB(199, 158, 158, 158),
                 ),
                 child: TextField(
+                  key: Key('emailField'),
                   style: TextStyle(color: Colors.black),
                   cursorColor: Color.fromARGB(255, 30, 215, 96),
                   decoration: InputDecoration(border: InputBorder.none),
@@ -59,6 +60,7 @@ class _signup1State extends State<signup1> {
                 MaterialPageRoute(builder: (context) => Signup2()),
               );
             },
+            key: Key('nextButton'),
             child: Container(
               height: 30,
               width: 70,

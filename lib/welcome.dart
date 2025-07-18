@@ -50,6 +50,7 @@ class _WelcomeState extends State<Welcome> {
                       MaterialPageRoute(builder: (context) => Signup()),
                     );
                   },
+                  key: Key('signupButton'),
                   child: Container(
                     height: 40,
                     width: 300,
@@ -73,6 +74,7 @@ class _WelcomeState extends State<Welcome> {
                       MaterialPageRoute(builder: (context) => Login()),
                     );
                   },
+                  key: Key('loginButton'),
                   child: Container(
                     height: 40,
                     width: 300,

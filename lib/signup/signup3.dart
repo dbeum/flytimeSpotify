@@ -89,6 +89,7 @@ class _Signup3State extends State<Signup3> {
                 padding: EdgeInsets.only(left: 15),
                 child: GestureDetector(
                   onTap: _showGenderPickerModal,
+                  key: Key('genderField'),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -111,6 +112,7 @@ class _Signup3State extends State<Signup3> {
                 MaterialPageRoute(builder: (context) => Signup4()),
               );
             },
+            key: Key('nextButton3'),
             child: Container(
               height: 30,
               width: 70,

@@ -59,7 +59,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: h1(),
+      home: Welcome(),
       debugShowCheckedModeBanner: false,
     );
   }

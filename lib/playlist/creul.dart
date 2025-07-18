@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Onrepeat extends StatefulWidget {
-  const Onrepeat({super.key});
+class Creul extends StatefulWidget {
+  const Creul({super.key});
 
   @override
-  State<Onrepeat> createState() => _OnrepeatState();
+  State<Creul> createState() => _CreulState();
 }
 
-class _OnrepeatState extends State<Onrepeat> {
+class _CreulState extends State<Creul> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +24,7 @@ class _OnrepeatState extends State<Onrepeat> {
                 ),
                 gradient: LinearGradient(
                   colors: [
-                    Colors.blueAccent,
+                    Colors.lightGreenAccent,
                     Color.fromARGB(255, 18, 18, 18),
                   ], // Gradient colors
                   begin: Alignment.topCenter, // Start point
@@ -50,13 +50,13 @@ class _OnrepeatState extends State<Onrepeat> {
                       height: 200,
                       width: 200,
                       color: Colors.transparent,
-                      child: Image.asset('assets/images/a5.jpeg'),
+                      child: Image.asset('assets/images/a3.jpeg'),
                     ),
                   ),
                   SizedBox(height: 20),
 
                   Text(
-                    '  Nostalgic Rewind',
+                    '  Cruel Santino Mix',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   Row(
@@ -94,7 +94,7 @@ class _OnrepeatState extends State<Onrepeat> {
                     children: [
                       SizedBox(width: 10),
                       Text(
-                        '3h14m',
+                        '14m',
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.bold,
@@ -162,13 +162,13 @@ class _OnrepeatState extends State<Onrepeat> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/o2.jpeg', height: 50),
+                          Image.asset('assets/images/cs1.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'drivers license',
+                                'Triology',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -176,7 +176,7 @@ class _OnrepeatState extends State<Onrepeat> {
                                 ),
                               ),
                               Text(
-                                'Olivia Rodrigo',
+                                'Cruel Santino',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,
@@ -195,13 +195,13 @@ class _OnrepeatState extends State<Onrepeat> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/n2.jpeg', height: 50),
+                          Image.asset('assets/images/cs2.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'The Shoop Shoop Song',
+                                'Final Champion',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -209,40 +209,7 @@ class _OnrepeatState extends State<Onrepeat> {
                                 ),
                               ),
                               Text(
-                                'Betty Everett',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 10,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Icon(Icons.more_horiz, color: Colors.grey),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset('assets/images/n3.jpeg', height: 50),
-                          SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Boyfriend',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Text(
-                                'Big Time Rush',
+                                'Cruel Santino',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,

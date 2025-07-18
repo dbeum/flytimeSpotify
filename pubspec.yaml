@@ -12,7 +12,10 @@ dependencies:
     sdk: flutter
   flutter_bounceable: ^1.2.0
   flutter_slider_drawer: ^3.0.2
+  integration_test:
+    sdk: flutter
   provider: ^6.1.5
+  test: ^1.25.15
 
 dev_dependencies:
   flutter_test:
@@ -55,7 +58,28 @@ flutter:
     - assets/images/b4.jpg
     - assets/images/c1.jpg
     - assets/images/c2.jpg
+    - assets/images/d1.jpeg
+    - assets/images/d2.jpeg
+    - assets/images/p1.jpeg
+    - assets/images/p2.jpeg
+    - assets/images/cs1.jpeg
+    - assets/images/cs2.jpeg
     - assets/images/c3.jpg
     - assets/images/c4.jpg
+    - assets/images/ch1.jpeg
+    - assets/images/ch2.jpeg
+    - assets/images/ch3.jpeg
+    - assets/images/ch4.jpeg
+    - assets/images/n1.jpeg
+    - assets/images/d3.jpeg
+    - assets/images/u1.jpeg
+    - assets/images/n2.jpeg
+    - assets/images/u2.jpeg
+    - assets/images/u3.jpeg
+    - assets/images/g1.jpeg
+    - assets/images/g2.jpeg
+    - assets/images/o1.jpeg
+    - assets/images/o2.jpeg
+    - assets/images/n3.jpeg
     - assets/images/icon.png
     - assets/images/rema1.jpeg

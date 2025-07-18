@@ -42,6 +42,7 @@ class _SignupState extends State<Signup> {
                       MaterialPageRoute(builder: (context) => signup1()),
                     );
                   },
+                  key: Key('continuewithemailButton'),
                   child: Container(
                     height: 40,
                     width: 300,

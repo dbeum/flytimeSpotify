@@ -71,6 +71,7 @@ class _Signup4State extends State<Signup4> {
               ),
               GestureDetector(
                 onTap: _pickDate,
+                key: Key('dateField'),
                 child: Container(
                   width: 300,
                   height: 40,
@@ -97,6 +98,7 @@ class _Signup4State extends State<Signup4> {
                 MaterialPageRoute(builder: (context) => signup5()),
               );
             },
+            key: Key('nextButton4'),
             child: Container(
               height: 30,
               width: 70,

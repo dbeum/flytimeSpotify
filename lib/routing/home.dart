@@ -1,6 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/playlist/chill.dart';
+import 'package:flytime_spotify/playlist/creul.dart';
+import 'package:flytime_spotify/playlist/drake.dart';
+import 'package:flytime_spotify/playlist/grime.dart';
 import 'package:flytime_spotify/playlist/nostolgia.dart';
+import 'package:flytime_spotify/playlist/olivia.dart';
+import 'package:flytime_spotify/playlist/onRepeat.dart';
+import 'package:flytime_spotify/playlist/pop.dart';
+import 'package:flytime_spotify/playlist/upbeat.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -47,7 +55,12 @@ class _HomeState extends State<Home> {
                     children: [
                       Image.asset('assets/images/a1.jpeg', height: 50),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Olivia()),
+                          );
+                        },
                         child: Container(
                           height: 50,
                           width: MediaQuery.of(context).size.width * 0.32,
@@ -83,7 +96,12 @@ class _HomeState extends State<Home> {
                     children: [
                       Image.asset('assets/images/a2.jpeg', height: 50),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Chill()),
+                          );
+                        },
                         child: Container(
                           height: 50,
                           width: MediaQuery.of(context).size.width * 0.32,
@@ -127,7 +145,12 @@ class _HomeState extends State<Home> {
                         width: 50,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Creul()),
+                          );
+                        },
                         child: Container(
                           height: 50,
                           width: MediaQuery.of(context).size.width * 0.32,
@@ -214,7 +237,12 @@ class _HomeState extends State<Home> {
                     children: [
                       Image.asset('assets/images/a5.jpeg', height: 50),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Onrepeat()),
+                          );
+                        },
                         child: Container(
                           height: 50,
                           width: MediaQuery.of(context).size.width * 0.32,
@@ -315,46 +343,81 @@ class _HomeState extends State<Home> {
                   initialPage: 1,
                 ),
                 items: [
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/a5.jpeg', height: 110),
-                        SizedBox(height: 5),
-                        Text('On Repeat', style: TextStyle(fontSize: 10)),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Onrepeat()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/a5.jpeg', height: 110),
+                          SizedBox(height: 5),
+                          Text('On Repeat', style: TextStyle(fontSize: 10)),
+                        ],
+                      ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/a1.jpeg', height: 110),
-                        SizedBox(height: 5),
-                        Text(
-                          'Olivia Rodrigo,Billie Eilish',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Olivia()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/a1.jpeg', height: 110),
+                          SizedBox(height: 5),
+                          Text(
+                            'Olivia Rodrigo,Billie Eilish',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/a2.jpeg', height: 110),
-                        SizedBox(height: 5),
-                        Text('Omah Lay,Ruger', style: TextStyle(fontSize: 10)),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Chill()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/a2.jpeg', height: 110),
+                          SizedBox(height: 5),
+                          Text(
+                            'Omah Lay,Ruger',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/a4.jpeg', height: 110),
-                        SizedBox(height: 5),
-                        Text(
-                          'Nostalgic Rewind',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Nostolgia()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/a4.jpeg', height: 110),
+                          SizedBox(height: 5),
+                          Text(
+                            'Nostalgic Rewind',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -390,52 +453,84 @@ class _HomeState extends State<Home> {
                   initialPage: 1,
                 ),
                 items: [
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/b4.jpg', height: 110),
-                        SizedBox(height: 5),
-                        Text(
-                          'Dave,Central Cee',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Grime()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/b4.jpg', height: 110),
+                          SizedBox(height: 5),
+                          Text(
+                            'Dave,Central Cee',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/b3.jpg', height: 110),
-                        SizedBox(height: 5),
-                        Text(
-                          'Torey Lanez,Lil Tecca',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Drake()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/b3.jpg', height: 110),
+                          SizedBox(height: 5),
+                          Text(
+                            'Torey Lanez,Lil Tecca',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/b2.jpg', height: 110),
-                        SizedBox(height: 5),
-                        Text(
-                          'Wiley,Major Lazer',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Upbeat()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/b2.jpg', height: 110),
+                          SizedBox(height: 5),
+                          Text(
+                            'Wiley,Major Lazer',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/b1.jpg', height: 110),
-                        SizedBox(height: 5),
-                        Text(
-                          'Tori Kelly,Sam Smith',
-                          style: TextStyle(fontSize: 11),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Pop()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/b1.jpg', height: 110),
+                          SizedBox(height: 5),
+                          Text(
+                            'Tori Kelly,Sam Smith',
+                            style: TextStyle(fontSize: 11),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -471,28 +566,44 @@ class _HomeState extends State<Home> {
                   initialPage: 1,
                 ),
                 items: [
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/a3.jpeg', height: 100),
-                        SizedBox(height: 5),
-                        Text(
-                          'Cruel Santino Mix',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Creul()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/a3.jpeg', height: 100),
+                          SizedBox(height: 5),
+                          Text(
+                            'Cruel Santino Mix',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/a1.jpeg', height: 100),
-                        SizedBox(height: 5),
-                        Text(
-                          'Olivia Rodrigo Mix',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Olivia()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/a1.jpeg', height: 100),
+                          SizedBox(height: 5),
+                          Text(
+                            'Olivia Rodrigo Mix',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Center(
@@ -510,16 +621,24 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/a4.jpeg', height: 100),
-                        SizedBox(height: 5),
-                        Text(
-                          'Nostalgic Rewind',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Nostolgia()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/a4.jpeg', height: 100),
+                          SizedBox(height: 5),
+                          Text(
+                            'Nostalgic Rewind',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
