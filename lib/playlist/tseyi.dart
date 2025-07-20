@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class Upbeat extends StatefulWidget {
-  const Upbeat({super.key});
+class Tseyi extends StatefulWidget {
+  const Tseyi({super.key});
 
   @override
-  State<Upbeat> createState() => _UpbeatState();
+  State<Tseyi> createState() => _TseyiState();
 }
 
-class _UpbeatState extends State<Upbeat> {
+class _TseyiState extends State<Tseyi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +25,7 @@ class _UpbeatState extends State<Upbeat> {
                 ),
                 gradient: LinearGradient(
                   colors: [
-                    Colors.greenAccent,
+                    Colors.yellow.shade300, // Start color
                     Color.fromARGB(255, 18, 18, 18),
                   ], // Gradient colors
                   begin: Alignment.topCenter, // Start point
@@ -50,21 +51,24 @@ class _UpbeatState extends State<Upbeat> {
                       height: 200,
                       width: 200,
                       color: Colors.transparent,
-                      child: Image.asset('assets/images/b2.jpg'),
+                      child: Image.asset('assets/images/c2.jpg'),
                     ),
                   ),
                   SizedBox(height: 20),
                   Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Text(
-                      'Upbeat Mix',
+                      'Chill Mix',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-
+                  Text(
+                    '  This is Seyi Vibez',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
                   Row(
                     children: [
                       SizedBox(width: 10),
@@ -100,7 +104,7 @@ class _UpbeatState extends State<Upbeat> {
                     children: [
                       SizedBox(width: 10),
                       Text(
-                        '3h14m',
+                        '1h14m',
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.bold,
@@ -168,13 +172,13 @@ class _UpbeatState extends State<Upbeat> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/u1.jpeg', height: 50),
+                          Image.asset('assets/images/o1.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Gotta Get Up',
+                                'all-american bitch',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -182,7 +186,7 @@ class _UpbeatState extends State<Upbeat> {
                                 ),
                               ),
                               Text(
-                                'Harry Nilsson',
+                                'Olivia Rodrigo',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,
@@ -201,13 +205,13 @@ class _UpbeatState extends State<Upbeat> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/u2.jpeg', height: 50),
+                          Image.asset('assets/images/o1.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Particula',
+                                'get him back!',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -215,7 +219,7 @@ class _UpbeatState extends State<Upbeat> {
                                 ),
                               ),
                               Text(
-                                'Major Lazer',
+                                'Olivia Rodrigo',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,
@@ -234,13 +238,13 @@ class _UpbeatState extends State<Upbeat> {
                     children: [
                       Row(
                         children: [
-                          Image.asset('assets/images/u3.jpeg', height: 50),
+                          Image.asset('assets/images/o2.jpeg', height: 50),
                           SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'My One',
+                                'deja vu',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -248,7 +252,106 @@ class _UpbeatState extends State<Upbeat> {
                                 ),
                               ),
                               Text(
-                                'Wiley,Kranium,Dappy,Tory Lanez',
+                                'Olivia Rodrigro',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Icon(Icons.more_horiz, color: Colors.grey),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset('assets/images/o2.jpeg', height: 50),
+                          SizedBox(width: 10),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'brutal',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Text(
+                                'Olivia Rodrigo',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Icon(Icons.more_horiz, color: Colors.grey),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset('assets/images/o2.jpeg', height: 50),
+                          SizedBox(width: 10),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'drivers license',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Text(
+                                'Olivia Rodrigo',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Icon(Icons.more_horiz, color: Colors.grey),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset('assets/images/o2.jpeg', height: 50),
+                          SizedBox(width: 10),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'good 4 u',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Text(
+                                'Olivia Rodrigo',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,
@@ -270,3 +373,5 @@ class _UpbeatState extends State<Upbeat> {
     );
   }
 }
+
+// This code defines a Flutter widget that creates a music playlist screen for an artist named Olivia Rodrigo.

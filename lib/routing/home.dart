@@ -8,6 +8,10 @@ import 'package:flytime_spotify/playlist/nostolgia.dart';
 import 'package:flytime_spotify/playlist/olivia.dart';
 import 'package:flytime_spotify/playlist/onRepeat.dart';
 import 'package:flytime_spotify/playlist/pop.dart';
+import 'package:flytime_spotify/playlist/tckay.dart';
+import 'package:flytime_spotify/playlist/tnsg.dart';
+import 'package:flytime_spotify/playlist/todumo.dart';
+import 'package:flytime_spotify/playlist/tseyi.dart';
 import 'package:flytime_spotify/playlist/upbeat.dart';
 
 class Home extends StatefulWidget {
@@ -674,46 +678,77 @@ class _HomeState extends State<Home> {
                   initialPage: 1,
                 ),
                 items: [
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/c4.jpg', height: 110),
-                        SizedBox(height: 5),
-                        Text('This is Ckay', style: TextStyle(fontSize: 10)),
-                      ],
+                  GestureDetector(
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Tckay()),
+                    ),
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/c4.jpg', height: 110),
+                          SizedBox(height: 5),
+                          Text('This is Ckay', style: TextStyle(fontSize: 10)),
+                        ],
+                      ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/c3.jpg', height: 110),
-                        SizedBox(height: 5),
-                        Text(
-                          'This is Odumodubluck',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Todumo()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/c3.jpg', height: 110),
+                          SizedBox(height: 5),
+                          Text(
+                            'This is Odumodubluck',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/c2.jpg', height: 110),
-                        SizedBox(height: 5),
-                        Text(
-                          'This is Seyi Vibez',
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Tseyi()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/c2.jpg', height: 110),
+                          SizedBox(height: 5),
+                          Text(
+                            'This is Seyi Vibez',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/c1.jpg', height: 110),
-                        SizedBox(height: 5),
-                        Text('This is NSG', style: TextStyle(fontSize: 11)),
-                      ],
+
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Tnsg()),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset('assets/images/c1.jpg', height: 110),
+                          SizedBox(height: 5),
+                          Text('This is NSG', style: TextStyle(fontSize: 10)),
+                        ],
+                      ),
                     ),
                   ),
                 ],

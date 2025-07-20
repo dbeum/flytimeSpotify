@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class Upbeat extends StatefulWidget {
-  const Upbeat({super.key});
+class Album extends StatefulWidget {
+  const Album({super.key});
 
   @override
-  State<Upbeat> createState() => _UpbeatState();
+  State<Album> createState() => _AlbumState();
 }
 
-class _UpbeatState extends State<Upbeat> {
+class _AlbumState extends State<Album> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +25,7 @@ class _UpbeatState extends State<Upbeat> {
                 ),
                 gradient: LinearGradient(
                   colors: [
-                    Colors.greenAccent,
+                    Colors.white,
                     Color.fromARGB(255, 18, 18, 18),
                   ], // Gradient colors
                   begin: Alignment.topCenter, // Start point
@@ -50,21 +51,21 @@ class _UpbeatState extends State<Upbeat> {
                       height: 200,
                       width: 200,
                       color: Colors.transparent,
-                      child: Image.asset('assets/images/b2.jpg'),
+                      child: Image.asset('assets/images/Icona.png'),
                     ),
                   ),
                   SizedBox(height: 20),
+
                   Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Text(
-                      'Upbeat Mix',
+                      'Track',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-
                   Row(
                     children: [
                       SizedBox(width: 10),
@@ -75,19 +76,17 @@ class _UpbeatState extends State<Upbeat> {
                           borderRadius: BorderRadius.all(Radius.circular(360)),
                           color: Colors.blue,
                         ),
-                        child: Center(
-                          child: Text(
-                            'U',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 10,
-                            ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(360)),
+                          child: Image.asset(
+                            'assets/images/rema1.jpeg',
+                            height: 20,
                           ),
                         ),
                       ),
                       SizedBox(width: 10),
                       Text(
-                        'User',
+                        'Rema',
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.bold,
@@ -100,7 +99,7 @@ class _UpbeatState extends State<Upbeat> {
                     children: [
                       SizedBox(width: 10),
                       Text(
-                        '3h14m',
+                        '1h14m',
                         style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.bold,
@@ -166,98 +165,25 @@ class _UpbeatState extends State<Upbeat> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
+                      //  SizedBox(width: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.asset('assets/images/u1.jpeg', height: 50),
-                          SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Gotta Get Up',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Text(
-                                'Harry Nilsson',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 10,
-                                ),
-                              ),
-                            ],
+                          Text(
+                            'Track',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                          ),
+                          Text(
+                            'Rema',
+                            style: TextStyle(color: Colors.grey, fontSize: 10),
                           ),
                         ],
                       ),
-                      Icon(Icons.more_horiz, color: Colors.grey),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset('assets/images/u2.jpeg', height: 50),
-                          SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Particula',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Text(
-                                'Major Lazer',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 10,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Icon(Icons.more_horiz, color: Colors.grey),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset('assets/images/u3.jpeg', height: 50),
-                          SizedBox(width: 10),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'My One',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Text(
-                                'Wiley,Kranium,Dappy,Tory Lanez',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 10,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
+
                       Icon(Icons.more_horiz, color: Colors.grey),
                     ],
                   ),

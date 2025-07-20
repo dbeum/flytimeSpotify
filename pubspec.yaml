@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   carousel_slider: ^5.1.1
+  custom_sliding_segmented_control: ^1.8.5
   flutter:
     sdk: flutter
   flutter_bounceable: ^1.2.0
@@ -82,4 +83,10 @@ flutter:
     - assets/images/o2.jpeg
     - assets/images/n3.jpeg
     - assets/images/icon.png
+    - assets/images/Icona.png
+    - assets/images/T1.png
+    - assets/images/T2.png
+    - assets/images/m1.png
+    - assets/images/m2.png
     - assets/images/rema1.jpeg
+    - assets/images/rema2.jpeg

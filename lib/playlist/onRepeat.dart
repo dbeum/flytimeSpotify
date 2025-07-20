@@ -54,7 +54,16 @@ class _OnrepeatState extends State<Onrepeat> {
                     ),
                   ),
                   SizedBox(height: 20),
-
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: Text(
+                      'Chill Mix',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
                   Text(
                     '  Nostalgic Rewind',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -243,6 +252,39 @@ class _OnrepeatState extends State<Onrepeat> {
                               ),
                               Text(
                                 'Big Time Rush',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Icon(Icons.more_horiz, color: Colors.grey),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset('assets/images/o2.jpeg', height: 50),
+                          SizedBox(width: 10),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'good 4 u',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
+                              ),
+                              Text(
+                                'Olivia Rodrigo',
                                 style: TextStyle(
                                   color: Colors.grey,
                                   fontSize: 10,

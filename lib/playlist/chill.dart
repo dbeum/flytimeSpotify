@@ -54,11 +54,17 @@ class _ChillState extends State<Chill> {
                     ),
                   ),
                   SizedBox(height: 20),
-
-                  Text(
-                    '  Chill Mix',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: Text(
+                      'Chill Mix',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
+
                   Row(
                     children: [
                       SizedBox(width: 10),

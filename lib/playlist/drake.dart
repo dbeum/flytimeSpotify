@@ -54,7 +54,16 @@ class _DrakeState extends State<Drake> {
                     ),
                   ),
                   SizedBox(height: 20),
-
+                  Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: Text(
+                      'Chill Mix',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
                   Text(
                     '  Drake Mix',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),

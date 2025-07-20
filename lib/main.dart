@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/artist/about.dart';
+import 'package:flytime_spotify/playlist/album.dart';
 import 'package:flytime_spotify/playlist/nostolgia.dart';
+import 'package:flytime_spotify/artist/rema.dart';
+import 'package:flytime_spotify/providers/expand.dart';
+
 import 'package:flytime_spotify/routes.dart';
 import 'package:flytime_spotify/routing/home.dart';
 import 'package:flytime_spotify/tastepicker/artistpicker.dart';
@@ -21,6 +26,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => passwordVisibilityProvider()),
         ChangeNotifierProvider(create: (_) => Selectedartistprovider()),
+        ChangeNotifierProvider(create: (_) => Expand()),
       ],
       child: const MainApp(),
     ),
