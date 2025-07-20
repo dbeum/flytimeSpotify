@@ -71,59 +71,62 @@ class _Signup3State extends State<Signup3> {
         ),
         backgroundColor: Color.fromARGB(255, 18, 18, 18),
       ),
-      body: Column(
-        children: [
-          Container(),
-          SizedBox(height: 20),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('What\s your gender?', style: TextStyle(fontSize: 16)),
-              Container(
-                width: 300,
-                height: 40,
-                decoration: BoxDecoration(
-                  border: Border.all(width: 1, color: Colors.white),
-                  color: const Color.fromARGB(199, 158, 158, 158),
-                ),
-                padding: EdgeInsets.only(left: 15),
-                child: GestureDetector(
-                  onTap: _showGenderPickerModal,
-                  key: Key('genderField'),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        selectedGender ?? "Select Gender",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Icon(Icons.arrow_drop_down, color: Colors.white),
-                    ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(),
+            SizedBox(height: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('What\s your gender?', style: TextStyle(fontSize: 16)),
+                Container(
+                  width: 300,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.white),
+                    color: const Color.fromARGB(199, 158, 158, 158),
+                  ),
+                  padding: EdgeInsets.only(left: 15),
+                  child: GestureDetector(
+                    onTap: _showGenderPickerModal,
+
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          selectedGender ?? "Select Gender",
+                          style: TextStyle(color: Colors.white),
+                          key: Key('genderField'),
+                        ),
+                        Icon(Icons.arrow_drop_down, color: Colors.white),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-          SizedBox(height: 50),
-          Bounceable(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Signup4()),
-              );
-            },
-            key: Key('nextButton3'),
-            child: Container(
-              height: 30,
-              width: 70,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 83, 83, 83),
-                borderRadius: BorderRadius.all(Radius.circular(50)),
-              ),
-              child: Center(child: Text('Next')),
+              ],
             ),
-          ),
-        ],
+            SizedBox(height: 50),
+            Bounceable(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Signup4()),
+                );
+              },
+              key: Key('nextButton3'),
+              child: Container(
+                height: 30,
+                width: 70,
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 83, 83, 83),
+                  borderRadius: BorderRadius.all(Radius.circular(50)),
+                ),
+                child: Center(child: Text('Next')),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
