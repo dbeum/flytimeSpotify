@@ -38,9 +38,10 @@ class _h1State extends State<h1> {
             child: Container(
               height: 60,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(15)),
+                borderRadius: BorderRadius.all(Radius.circular(5)),
+                color: Colors.deepOrangeAccent,
               ),
-              color: Colors.deepOrangeAccent,
+
               child: Column(
                 children: [
                   SizedBox(height: 5),
