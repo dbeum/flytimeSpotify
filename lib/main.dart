@@ -1,22 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/artist/about.dart';
-import 'package:flytime_spotify/playlist/album.dart';
-import 'package:flytime_spotify/playlist/nostolgia.dart';
-import 'package:flytime_spotify/artist/rema.dart';
+import 'package:flytime_spotify/playback.dart';
+
 import 'package:flytime_spotify/providers/expand.dart';
+import 'package:flytime_spotify/providers/play.dart';
+import 'package:flytime_spotify/providers/slidetrack.dart';
 
 import 'package:flytime_spotify/routes.dart';
-import 'package:flytime_spotify/routing/home.dart';
-import 'package:flytime_spotify/tastepicker/artistpicker.dart';
+
 import 'package:flytime_spotify/providers/selectedartist.dart';
-import 'package:flytime_spotify/signup/login.dart';
-import 'package:flytime_spotify/signup/signup.dart';
-import 'package:flytime_spotify/signup/signup1.dart';
-import 'package:flytime_spotify/signup/signup2.dart';
-import 'package:flytime_spotify/signup/signup3.dart';
-import 'package:flytime_spotify/signup/signup4.dart';
-import 'package:flytime_spotify/signup/signup5.dart';
-import 'package:flytime_spotify/welcome.dart';
+
 import 'package:provider/provider.dart';
 import 'package:flytime_spotify/providers/visibility.dart';
 
@@ -27,6 +19,8 @@ void main() {
         ChangeNotifierProvider(create: (_) => passwordVisibilityProvider()),
         ChangeNotifierProvider(create: (_) => Selectedartistprovider()),
         ChangeNotifierProvider(create: (_) => Expand()),
+        ChangeNotifierProvider(create: (_) => PlayProvider()),
+        ChangeNotifierProvider(create: (_) => SlidetrackProvider()),
       ],
       child: const MainApp(),
     ),
@@ -65,7 +59,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: Welcome(),
+      home: Playback(),
       debugShowCheckedModeBanner: false,
     );
   }

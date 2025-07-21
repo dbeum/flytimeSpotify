@@ -57,17 +57,14 @@ class _CreulState extends State<Creul> {
                   Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Text(
-                      'Chill Mix',
+                      'Cruel Santino Mix',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  Text(
-                    '  Cruel Santino Mix',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+
                   Row(
                     children: [
                       SizedBox(width: 10),

@@ -58,17 +58,14 @@ class _TckayState extends State<Tckay> {
                   Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Text(
-                      'Chill Mix',
+                      'This is Ckay',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  Text(
-                    '  This is Ckay',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+
                   Row(
                     children: [
                       SizedBox(width: 10),

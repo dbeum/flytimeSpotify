@@ -58,17 +58,14 @@ class _TnsgState extends State<Tnsg> {
                   Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Text(
-                      'Chill Mix',
+                      'This is NSG',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  Text(
-                    '  This is NSG',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+
                   Row(
                     children: [
                       SizedBox(width: 10),

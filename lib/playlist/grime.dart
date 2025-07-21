@@ -57,17 +57,14 @@ class _GrimeState extends State<Grime> {
                   Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Text(
-                      'Chill Mix',
+                      'Grime Mix',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  Text(
-                    '  Grime Mix',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+
                   Row(
                     children: [
                       SizedBox(width: 10),

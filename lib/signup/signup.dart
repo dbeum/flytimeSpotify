@@ -74,7 +74,7 @@ class _SignupState extends State<Signup> {
                       child: Row(
                         children: [
                           SizedBox(width: 10),
-                          Icon(Icons.phone_android),
+                          Icon(Icons.phone_android, color: Colors.white),
                           SizedBox(width: 30),
                           Text('Continue with phone number'),
                         ],

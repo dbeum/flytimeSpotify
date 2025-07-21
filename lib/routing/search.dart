@@ -65,6 +65,7 @@ class _SearchState extends State<Search> {
             ),
           ],
         ),
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Container(

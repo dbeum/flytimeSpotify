@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/routes.dart';
 import 'package:flytime_spotify/routing/home.dart';
 import 'package:flytime_spotify/providers/selectedartist.dart';
 
@@ -762,7 +763,7 @@ class _ArtistpickerState extends State<Artistpicker> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Home()),
+                      MaterialPageRoute(builder: (context) => h1()),
                     );
                   },
                   child: Container(
