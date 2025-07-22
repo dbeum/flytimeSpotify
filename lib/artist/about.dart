@@ -77,7 +77,7 @@ class _AboutState extends State<About> {
                             '346th',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 25,
+                              fontSize: 24,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -85,7 +85,7 @@ class _AboutState extends State<About> {
                             'in the world',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 12,
+                              fontSize: 10,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -102,7 +102,7 @@ class _AboutState extends State<About> {
                 'Rema is a Nigerian singer, songwriter, and rapper. He gained international recognition with his hit singles and has become one of the leading artists in the Afrobeats genre.',
                 style: TextStyle(
                   color: Colors.grey,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                   fontSize: 16,
                 ),
               ),
@@ -133,8 +133,8 @@ class _AboutState extends State<About> {
                       Text(
                         'Posted by Rema',
                         style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
                           color: Colors.grey,
                         ),
                       ),
@@ -149,8 +149,8 @@ class _AboutState extends State<About> {
                         'Facebook',
                         style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
                         ),
                       ),
                     ],
@@ -165,8 +165,8 @@ class _AboutState extends State<About> {
                         'Wikipedia',
                         style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
                         ),
                       ),
                     ],

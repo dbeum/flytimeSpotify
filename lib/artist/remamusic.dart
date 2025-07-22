@@ -200,7 +200,7 @@ class _RemamusicState extends State<Remamusic> {
                   left: 10,
                   child: Container(
                     height: 30,
-                    width: MediaQuery.of(context).size.width * 0.57,
+                    width: MediaQuery.of(context).size.width * 0.69,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -292,7 +292,7 @@ class _RemamusicState extends State<Remamusic> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 10),
 
         GestureDetector(
           onTap: () {
@@ -343,7 +343,7 @@ class _RemamusicState extends State<Remamusic> {
                             'in the world',
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 12,
+                              fontSize: 10,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -397,7 +397,7 @@ class _RemamusicState extends State<Remamusic> {
             ),
           ),
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 30),
       ],
     );
   }

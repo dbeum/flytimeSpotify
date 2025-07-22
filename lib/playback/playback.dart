@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bounceable/flutter_bounceable.dart';
+import 'package:flytime_spotify/providers/play.dart';
+import 'package:provider/provider.dart';
 
 class Playback extends StatefulWidget {
   const Playback({super.key});
@@ -9,8 +12,10 @@ class Playback extends StatefulWidget {
 
 class _PlaybackState extends State<Playback> {
   double _progress = 0.3;
+
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<PlayProvider>(context);
     final totalWidth = MediaQuery.of(context).size.width - 40;
     return Scaffold(
       body: SingleChildScrollView(
@@ -25,18 +30,26 @@ class _PlaybackState extends State<Playback> {
           ),
           child: Column(
             children: [
-              SizedBox(height: 50),
+              SizedBox(height: 60),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.arrow_back_ios_new, color: Colors.white),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Transform.rotate(
+                      angle: -1.57,
+                      child: Icon(Icons.arrow_back_ios, color: Colors.white),
+                    ),
+                  ),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.3),
                   Text('Playing Song'),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.3),
                   Icon(Icons.more_horiz, color: Colors.white),
                 ],
               ),
-              SizedBox(height: 100),
+              SizedBox(height: 60),
               Container(
                 height: 350,
                 width: 350,
@@ -111,7 +124,7 @@ class _PlaybackState extends State<Playback> {
                     ),
                     // Progress filled line
                     Container(
-                      height: 4,
+                      height: 6,
                       width: totalWidth * _progress,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -133,28 +146,57 @@ class _PlaybackState extends State<Playback> {
                   ],
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
                       SizedBox(width: 20),
-                      Icon(Icons.shuffle, color: Colors.white, size: 35),
+                      Icon(Icons.shuffle_rounded, color: Colors.grey, size: 30),
                     ],
                   ),
                   Row(
                     children: [
-                      Icon(Icons.skip_previous, color: Colors.white, size: 50),
+                      Bounceable(
+                        onTap: () {},
+                        child: Icon(
+                          Icons.skip_previous,
+                          color: Colors.white,
+                          size: 50,
+                        ),
+                      ),
                       SizedBox(width: 10),
-                      Icon(Icons.play_circle, color: Colors.white, size: 80),
+                      Bounceable(
+                        onTap: () {
+                          provider.togglePlay();
+                        },
+                        child: provider.isplayed
+                            ? Icon(
+                                Icons.pause_circle,
+                                color: Colors.white,
+                                size: 80,
+                              )
+                            : Icon(
+                                Icons.play_circle,
+                                color: Colors.white,
+                                size: 80,
+                              ),
+                      ),
                       SizedBox(width: 10),
-                      Icon(Icons.skip_next, color: Colors.white, size: 50),
+                      Bounceable(
+                        onTap: () {},
+                        child: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 50,
+                        ),
+                      ),
                     ],
                   ),
                   Row(
                     children: [
-                      Icon(Icons.repeat_on, color: Colors.white, size: 35),
+                      Icon(Icons.repeat, color: Colors.grey, size: 30),
                       SizedBox(width: 20),
                     ],
                   ),
@@ -181,7 +223,8 @@ class _PlaybackState extends State<Playback> {
                         color: Colors.white,
                         size: 25,
                       ),
-                      Icon(Icons.more_horiz, color: Colors.white, size: 25),
+                      SizedBox(width: 5),
+                      Image.asset('assets/images/more.png'),
                       SizedBox(width: 10),
                     ],
                   ),

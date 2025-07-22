@@ -57,17 +57,14 @@ class _OnrepeatState extends State<Onrepeat> {
                   Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Text(
-                      'Chill Mix',
+                      'On Repeat',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  Text(
-                    '  Nostalgic Rewind',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+
                   Row(
                     children: [
                       SizedBox(width: 10),

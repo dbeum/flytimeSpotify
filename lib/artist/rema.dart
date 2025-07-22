@@ -161,7 +161,13 @@ class _RemaState extends State<Rema> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text('Madrid'),
-                                      Text('Fri,4PM•Talrkin'),
+                                      Text(
+                                        'Fri,4PM•Talrkin',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ],
@@ -197,6 +203,10 @@ class _RemaState extends State<Rema> {
                                       Text('Barcelona'),
                                       Text(
                                         'Sun,6PM•Plaza Mayor-Poble Espanyol',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey,
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -237,8 +247,8 @@ class _RemaState extends State<Rema> {
                                 Text(
                                   'Rave & Roses:CD',
                                   style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],
@@ -260,8 +270,8 @@ class _RemaState extends State<Rema> {
                                 Text(
                                   'White T-Shirt-Collab Rema x Places+Faces',
                                   style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],

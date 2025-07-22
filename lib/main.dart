@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/playback.dart';
+import 'package:flytime_spotify/playback/playback.dart';
+import 'package:flytime_spotify/playback/playbackmore.dart';
+import 'package:flytime_spotify/playback/share.dart';
 
 import 'package:flytime_spotify/providers/expand.dart';
+import 'package:flytime_spotify/providers/like.dart';
 import 'package:flytime_spotify/providers/play.dart';
 import 'package:flytime_spotify/providers/slidetrack.dart';
 
@@ -21,6 +24,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => Expand()),
         ChangeNotifierProvider(create: (_) => PlayProvider()),
         ChangeNotifierProvider(create: (_) => SlidetrackProvider()),
+        ChangeNotifierProvider(create: (_) => likeProvider()),
       ],
       child: const MainApp(),
     ),
@@ -59,7 +63,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: h1(),
+      home: Share(),
       debugShowCheckedModeBanner: false,
     );
   }
