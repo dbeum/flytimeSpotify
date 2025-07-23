@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
+import 'package:flytime_spotify/playback/share.dart';
 import 'package:flytime_spotify/providers/play.dart';
 import 'package:provider/provider.dart';
 
@@ -51,8 +52,8 @@ class _PlaybackState extends State<Playback> {
               ),
               SizedBox(height: 60),
               Container(
-                height: 350,
-                width: 350,
+                height: 330,
+                width: 330,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
                   image: DecorationImage(
@@ -218,10 +219,18 @@ class _PlaybackState extends State<Playback> {
                   ),
                   Row(
                     children: [
-                      Icon(
-                        Icons.ios_share_outlined,
-                        color: Colors.white,
-                        size: 25,
+                      IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Share()),
+                          );
+                        },
+                        icon: Icon(
+                          Icons.ios_share_outlined,
+                          color: Colors.white,
+                          size: 25,
+                        ),
                       ),
                       SizedBox(width: 5),
                       Image.asset('assets/images/more.png'),

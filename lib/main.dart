@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flytime_spotify/playback/playback.dart';
 import 'package:flytime_spotify/playback/playbackmore.dart';
+import 'package:flytime_spotify/playback/queue.dart';
 import 'package:flytime_spotify/playback/share.dart';
 
 import 'package:flytime_spotify/providers/expand.dart';
@@ -63,7 +64,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: Share(),
+      home: Queue(),
       debugShowCheckedModeBanner: false,
     );
   }
