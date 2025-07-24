@@ -19,51 +19,45 @@ class _QueueState extends State<Queue> {
         child: Column(
           children: [
             SizedBox(height: 60),
-            Stack(
-              children: [
-                Center(
-                  child: Text(
-                    'Track Remastered',
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
+            SizedBox(
+              height: 40,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 10,
+
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        height: 35,
+                        width: 35,
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 0, 0, 0),
+                          borderRadius: BorderRadius.circular(360),
+                        ),
+                        child: Center(
+                          child: Image.asset('assets/images/cancel2.png'),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                  Center(
+                    child: Text(
+                      'Track Remastered',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Row(
-              children: [
-                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Container(
-                    height: 40,
-                    width: 40,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 0, 0, 0),
-                      borderRadius: BorderRadius.circular(360),
-                    ),
-                    child: Center(
-                      child: Image.asset('assets/images/cancel2.png'),
-                    ),
-                  ),
-                ),
-                SizedBox(width: MediaQuery.of(context).size.width * 0.15),
-                Text(
-                  'Track Remastered',
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 20),
+
+            SizedBox(height: 30),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

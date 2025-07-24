@@ -15,7 +15,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 18, 18, 18),
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: Color.fromARGB(255, 18, 18, 18)),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -34,7 +34,12 @@ class _LoginState extends State<Login> {
                 children: [
                   SizedBox(height: 30),
                   Bounceable(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => signup1()),
+                      );
+                    },
                     child: Container(
                       height: 40,
                       width: 300,
@@ -65,7 +70,7 @@ class _LoginState extends State<Login> {
                       child: Row(
                         children: [
                           SizedBox(width: 10),
-                          Icon(Icons.phone_android),
+                          Icon(Icons.phone_android, color: Colors.white),
                           SizedBox(width: 10),
                           Flexible(child: Text('Continue with phone number')),
                         ],

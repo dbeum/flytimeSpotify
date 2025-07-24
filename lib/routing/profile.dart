@@ -20,11 +20,11 @@ class _ProfileState extends State<Profile> {
             onPressed: () {
               Navigator.pop(context);
             },
-            child: Icon(Icons.arrow_back_ios, color: Colors.white, size: 23),
+            child: Icon(Icons.arrow_back_ios, color: Colors.grey, size: 23),
           ),
           Row(
             children: [
-              SizedBox(width: 10),
+              SizedBox(width: 20),
               Container(
                 height: 100,
                 width: 100,
@@ -55,7 +55,7 @@ class _ProfileState extends State<Profile> {
           SizedBox(height: 20),
           Row(
             children: [
-              SizedBox(width: 10),
+              SizedBox(width: 20),
               Container(
                 height: 30,
                 width: 50,
@@ -79,7 +79,7 @@ class _ProfileState extends State<Profile> {
           SizedBox(height: 20),
           Row(
             children: [
-              SizedBox(width: 10),
+              SizedBox(width: 20),
               Text(
                 'Playlist',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
@@ -99,7 +99,7 @@ class _ProfileState extends State<Profile> {
               children: [
                 Row(
                   children: [
-                    SizedBox(width: 10),
+                    SizedBox(width: 20),
                     Image.asset('assets/images/a4.jpeg', height: 50),
                     SizedBox(width: 10),
                     Column(

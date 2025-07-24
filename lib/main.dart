@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/navbar.dart';
 import 'package:flytime_spotify/playback/playback.dart';
 import 'package:flytime_spotify/playback/playbackmore.dart';
 import 'package:flytime_spotify/playback/queue.dart';
 import 'package:flytime_spotify/playback/share.dart';
+import 'package:flytime_spotify/providers/download.dart';
 
 import 'package:flytime_spotify/providers/expand.dart';
 import 'package:flytime_spotify/providers/like.dart';
+import 'package:flytime_spotify/providers/miniplayer.dart';
 import 'package:flytime_spotify/providers/play.dart';
+import 'package:flytime_spotify/providers/shuffle.dart';
 import 'package:flytime_spotify/providers/slidetrack.dart';
 
 import 'package:flytime_spotify/routes.dart';
 
 import 'package:flytime_spotify/providers/selectedartist.dart';
+import 'package:flytime_spotify/routing/settings.dart';
+import 'package:flytime_spotify/welcome.dart';
 
 import 'package:provider/provider.dart';
 import 'package:flytime_spotify/providers/visibility.dart';
@@ -26,6 +32,9 @@ void main() {
         ChangeNotifierProvider(create: (_) => PlayProvider()),
         ChangeNotifierProvider(create: (_) => SlidetrackProvider()),
         ChangeNotifierProvider(create: (_) => likeProvider()),
+        ChangeNotifierProvider(create: (_) => downloadProvider()),
+        ChangeNotifierProvider(create: (_) => ShuffleProvider()),
+        ChangeNotifierProvider(create: (_) => MiniPlayerProvider()),
       ],
       child: const MainApp(),
     ),
@@ -64,7 +73,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: Queue(),
+      home: Playback(),
       debugShowCheckedModeBanner: false,
     );
   }

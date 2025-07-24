@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/providers/download.dart';
+import 'package:flytime_spotify/providers/play.dart';
+import 'package:provider/provider.dart';
 
 class Upbeat extends StatefulWidget {
   const Upbeat({super.key});
@@ -10,6 +13,8 @@ class Upbeat extends StatefulWidget {
 class _UpbeatState extends State<Upbeat> {
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<downloadProvider>(context);
+    final play = Provider.of<PlayProvider>(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -55,7 +60,7 @@ class _UpbeatState extends State<Upbeat> {
                   ),
                   SizedBox(height: 20),
                   Padding(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: EdgeInsets.only(left: 15),
                     child: Text(
                       'Upbeat Mix',
                       style: TextStyle(
@@ -67,7 +72,7 @@ class _UpbeatState extends State<Upbeat> {
 
                   Row(
                     children: [
-                      SizedBox(width: 10),
+                      SizedBox(width: 15),
                       Container(
                         height: 20,
                         width: 20,
@@ -98,7 +103,7 @@ class _UpbeatState extends State<Upbeat> {
                   SizedBox(height: 5),
                   Row(
                     children: [
-                      SizedBox(width: 10),
+                      SizedBox(width: 15),
                       Text(
                         '3h14m',
                         style: TextStyle(
@@ -116,43 +121,73 @@ class _UpbeatState extends State<Upbeat> {
               children: [
                 Row(
                   children: [
-                    SizedBox(width: 20),
+                    SizedBox(width: 15),
+                    GestureDetector(
+                      onTap: () {
+                        provider.toggledownload();
+                      },
+                      child: provider.isdownload
+                          ? Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(360),
+                                ),
+                                color: Color.fromARGB(255, 30, 215, 96),
+                              ),
+                              child: Icon(
+                                Icons.check,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                            )
+                          : Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(360),
+                                ),
+                                color: Colors.transparent,
+                                border: Border.all(
+                                  width: 2,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              child: Icon(
+                                Icons.arrow_downward_rounded,
+                                color: Colors.grey,
+                                size: 20,
+                              ),
+                            ),
+                    ),
 
-                    Container(
-                      height: 25,
-                      width: 25,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(360)),
-                        color: Color.fromARGB(255, 30, 215, 96),
-                      ),
-                      child: Icon(
-                        Icons.arrow_downward_rounded,
-                        color: Colors.black,
-                        size: 20,
-                      ),
-                    ),
-                    SizedBox(width: 10),
-                    Icon(
-                      Icons.person_add_outlined,
-                      color: Colors.grey,
-                      size: 30,
-                    ),
-                    SizedBox(width: 10),
+                    // SizedBox(width: 10),
+                    Image.asset('assets/images/p1.png'),
+                    //   SizedBox(width: 10),
                     Icon(Icons.more_horiz, color: Colors.grey),
                   ],
                 ),
 
                 Row(
                   children: [
-                    Icon(
-                      Icons.shuffle_rounded,
-                      color: Color.fromARGB(255, 30, 215, 96),
-                      size: 30,
-                    ),
-                    Icon(
-                      Icons.play_circle,
-                      size: 50,
-                      color: Color.fromARGB(255, 30, 215, 96),
+                    Image.asset('assets/images/ps.png'),
+                    GestureDetector(
+                      onTap: () {
+                        play.togglePlay();
+                      },
+                      child: play.isplayed
+                          ? Icon(
+                              Icons.pause_circle,
+                              size: 50,
+                              color: Color.fromARGB(255, 30, 215, 96),
+                            )
+                          : Icon(
+                              Icons.play_circle,
+                              size: 50,
+                              color: Color.fromARGB(255, 30, 215, 96),
+                            ),
                     ),
                     SizedBox(width: 20),
                   ],

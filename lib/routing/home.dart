@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/artist/rema.dart';
 import 'package:flytime_spotify/playlist/chill.dart';
 import 'package:flytime_spotify/playlist/creul.dart';
 import 'package:flytime_spotify/playlist/drake.dart';
@@ -286,7 +287,12 @@ class _HomeState extends State<Home> {
                         width: 50,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Rema()),
+                          );
+                        },
                         child: Container(
                           height: 50,
                           width: MediaQuery.of(context).size.width * 0.32,

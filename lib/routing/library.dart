@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flytime_spotify/playlist/nostolgia.dart';
 import 'package:flytime_spotify/playlist/olivia.dart';
 import 'package:flytime_spotify/playlist/onRepeat.dart';
-import 'package:flytime_spotify/profile.dart';
+import 'package:flytime_spotify/routing/profile.dart';
 import 'package:flytime_spotify/routing/librarysearch.dart';
 
 class Library extends StatefulWidget {
