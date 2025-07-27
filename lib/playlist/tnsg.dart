@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flytime_spotify/providers/download.dart';
 import 'package:flytime_spotify/providers/play.dart';
 import 'package:provider/provider.dart';

@@ -1,9 +1,6 @@
 import 'package:custom_sliding_segmented_control/custom_sliding_segmented_control.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flytime_spotify/artist/remamusic.dart';
-import 'package:flytime_spotify/providers/expand.dart';
-import 'package:provider/provider.dart';
 
 class Rema extends StatefulWidget {
   const Rema({super.key});

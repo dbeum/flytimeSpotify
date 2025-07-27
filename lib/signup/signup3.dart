@@ -79,7 +79,7 @@ class _Signup3State extends State<Signup3> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('What\s your gender?', style: TextStyle(fontSize: 16)),
+                Text('Whats your gender?', style: TextStyle(fontSize: 16)),
                 Container(
                   width: 300,
                   height: 40,

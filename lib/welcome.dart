@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:flytime_spotify/signup/login.dart';
 import 'package:flytime_spotify/signup/signup.dart';
-import 'package:flytime_spotify/signup/signup1.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});

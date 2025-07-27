@@ -31,7 +31,7 @@ class _signup1State extends State<signup1> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('What\s your email?', style: TextStyle(fontSize: 16)),
+                Text('Whats your email?', style: TextStyle(fontSize: 16)),
                 Container(
                   width: 300,
                   height: 40,

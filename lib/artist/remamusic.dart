@@ -184,7 +184,7 @@ class _RemamusicState extends State<Remamusic> {
               MaterialPageRoute(builder: (context) => Album()),
             );
           },
-          child: Container(
+          child: SizedBox(
             height: 200,
             width: MediaQuery.of(context).size.width * 0.9,
 
@@ -235,7 +235,7 @@ class _RemamusicState extends State<Remamusic> {
                 Positioned(
                   left: 20,
                   bottom: 10,
-                  child: Container(
+                  child: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -301,7 +301,7 @@ class _RemamusicState extends State<Remamusic> {
               MaterialPageRoute(builder: (context) => About()),
             );
           },
-          child: Container(
+          child: SizedBox(
             height: 350,
             width: MediaQuery.of(context).size.width * 0.9,
 
@@ -355,7 +355,7 @@ class _RemamusicState extends State<Remamusic> {
                 Positioned(
                   left: 20,
                   bottom: 10,
-                  child: Container(
+                  child: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -371,7 +371,7 @@ class _RemamusicState extends State<Remamusic> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Container(
+                            SizedBox(
                               width: MediaQuery.of(context).size.width * 0.7,
                               child: Text(
                                 'Afrorave prodigy,Rema was introduced to the world in March 2019,with the release of his self-titled debut EP',

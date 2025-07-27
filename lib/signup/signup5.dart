@@ -62,7 +62,7 @@ class _signup5State extends State<signup5> {
                 SizedBox(height: 20),
                 Container(height: 1, width: 300, color: Colors.white),
                 SizedBox(height: 20),
-                Container(
+                SizedBox(
                   width: 300,
                   child: Text(
                     'By tapping on"Create account",you agree to the Spotify Terms of Use and Privacy and Policy',
@@ -79,7 +79,7 @@ class _signup5State extends State<signup5> {
               ],
             ),
             SizedBox(height: 20),
-            Container(
+            SizedBox(
               width: 300,
               child: Column(
                 children: [
@@ -111,7 +111,7 @@ class _signup5State extends State<signup5> {
                       });
                     },
                     title: Text(
-                      "Share my registration data with Spotify\'s content providers for marketing purposes.",
+                      "Share my registration data with Spotify's content providers for marketing purposes.",
                       style: TextStyle(color: Colors.white, fontSize: 10),
                     ),
                     activeColor: Color(0xFF1ED760),

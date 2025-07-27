@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/album.dart';
 import 'package:flytime_spotify/artist/rema.dart';
+import 'package:flytime_spotify/playlist.dart';
 import 'package:flytime_spotify/playlist/chill.dart';
 import 'package:flytime_spotify/playlist/creul.dart';
 import 'package:flytime_spotify/playlist/drake.dart';
@@ -63,7 +65,10 @@ class _HomeState extends State<Home> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Olivia()),
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  AlbumPage(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                            ),
                           );
                         },
                         child: Container(
@@ -104,7 +109,11 @@ class _HomeState extends State<Home> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Chill()),
+                            MaterialPageRoute(
+                              builder: (context) => PlaylistPage(
+                                playlistId: '6mv2k2DBxZ516Cqcw1IZQE',
+                              ),
+                            ),
                           );
                         },
                         child: Container(

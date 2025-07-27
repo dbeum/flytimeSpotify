@@ -766,7 +766,7 @@ class _ArtistpickerState extends State<Artistpicker> {
                       MaterialPageRoute(builder: (context) => h1()),
                     );
                   },
-                  child: Container(
+                  child: SizedBox(
                     width: 100,
                     height: 40,
                     child: Stack(

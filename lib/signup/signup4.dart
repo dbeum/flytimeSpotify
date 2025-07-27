@@ -31,7 +31,7 @@ class _Signup4State extends State<Signup4> {
               surface: Color(0xFF121212),
               onSurface: Colors.white,
             ),
-            dialogBackgroundColor: Color(0xFF121212),
+            dialogTheme: DialogThemeData(backgroundColor: Color(0xFF121212)),
           ),
           child: child!,
         );

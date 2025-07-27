@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/playback/playback.dart';
 import 'package:flytime_spotify/providers/play.dart';
 import 'package:flytime_spotify/routing/home.dart';
 import 'package:flytime_spotify/routing/library.dart';
 import 'package:flytime_spotify/routing/search.dart';
-import 'package:flytime_spotify/routing/searchextended.dart';
 import 'package:provider/provider.dart';
 
 class h1 extends StatefulWidget {

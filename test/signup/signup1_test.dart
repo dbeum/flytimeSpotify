@@ -23,7 +23,7 @@ void main() async {
       ),
     );
     //check email text
-    expect(find.text('What\s your email?'), findsOneWidget);
+    expect(find.text('Whats your email?'), findsOneWidget);
     //check email field
     expect(find.byKey(Key('emailField')), findsOneWidget);
     //input email
