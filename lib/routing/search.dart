@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/models/playlist.dart';
+import 'package:flytime_spotify/playlist/album.dart';
 import 'package:flytime_spotify/routing/searchextended.dart';
+import 'package:flytime_spotify/services/spotifysearch_service.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
