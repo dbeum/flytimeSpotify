@@ -396,7 +396,11 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Olivia()),
+                        MaterialPageRoute(
+                          builder: (context) => PlaylistPage(
+                            playlistId: '2Uow2rC2RpEw5AEjoYxrZc',
+                          ),
+                        ),
                       );
                     },
                     child: Center(
@@ -441,26 +445,26 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Nostolgia()),
-                      );
-                    },
-                    child: Center(
-                      child: Column(
-                        children: [
-                          Image.asset('assets/images/a4.jpeg', height: 110),
-                          SizedBox(height: 5),
-                          Text(
-                            'Nostalgic Rewind',
-                            style: TextStyle(fontSize: 10),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(builder: (context) => Nostolgia()),
+                  //     );
+                  //   },
+                  //   child: Center(
+                  //     child: Column(
+                  //       children: [
+                  //         Image.asset('assets/images/nostolgia.png', height: 110),
+                  //         SizedBox(height: 5),
+                  //         Text(
+                  //           'Nostalgic Rewind',
+                  //           style: TextStyle(fontSize: 10),
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ),
@@ -504,10 +508,33 @@ class _HomeState extends State<Home> {
                     child: Center(
                       child: Column(
                         children: [
-                          Image.asset('assets/images/b4.jpg', height: 110),
+                          Image.asset('assets/images/guts.png', height: 110),
+                          SizedBox(height: 5),
+                          Text('GUTS', style: TextStyle(fontSize: 10)),
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              AlbumPage(albumId: '3SpBlxme9WbeQdI9kx7KAV'),
+                        ),
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/certified.png',
+                            height: 110,
+                          ),
                           SizedBox(height: 5),
                           Text(
-                            'Dave,Central Cee',
+                            'Certified Lover Boy',
                             style: TextStyle(fontSize: 10),
                           ),
                         ],
@@ -518,18 +545,18 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Drake()),
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              AlbumPage(albumId: '277z75G1Gdz0SWN9pegrrs'),
+                        ),
                       );
                     },
                     child: Center(
                       child: Column(
                         children: [
-                          Image.asset('assets/images/b3.jpg', height: 110),
+                          Image.asset('assets/images/burna.png', height: 110),
                           SizedBox(height: 5),
-                          Text(
-                            'Torey Lanez,Lil Tecca',
-                            style: TextStyle(fontSize: 10),
-                          ),
+                          Text('African Giant', style: TextStyle(fontSize: 10)),
                         ],
                       ),
                     ),
@@ -538,38 +565,21 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Upbeat()),
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              AlbumPage(albumId: '3tx8gQqWbGwqIGZHqDNrGe'),
+                        ),
                       );
                     },
                     child: Center(
                       child: Column(
                         children: [
-                          Image.asset('assets/images/b2.jpg', height: 110),
-                          SizedBox(height: 5),
-                          Text(
-                            'Wiley,Major Lazer',
-                            style: TextStyle(fontSize: 10),
+                          Image.asset(
+                            'assets/images/sweetener.png',
+                            height: 110,
                           ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Pop()),
-                      );
-                    },
-                    child: Center(
-                      child: Column(
-                        children: [
-                          Image.asset('assets/images/b1.jpg', height: 110),
                           SizedBox(height: 5),
-                          Text(
-                            'Tori Kelly,Sam Smith',
-                            style: TextStyle(fontSize: 11),
-                          ),
+                          Text('Sweetener', style: TextStyle(fontSize: 11)),
                         ],
                       ),
                     ),
@@ -611,18 +621,19 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Creul()),
+                        MaterialPageRoute(
+                          builder: (context) => PlaylistPage(
+                            playlistId: '2EMEoIYwiPecwKa5tOPbZm',
+                          ),
+                        ),
                       );
                     },
                     child: Center(
                       child: Column(
                         children: [
-                          Image.asset('assets/images/a3.jpeg', height: 100),
+                          Image.asset('assets/images/cruel.jpeg', height: 100),
                           SizedBox(height: 5),
-                          Text(
-                            'Cruel Santino Mix',
-                            style: TextStyle(fontSize: 10),
-                          ),
+                          Text('Cruel Santino', style: TextStyle(fontSize: 10)),
                         ],
                       ),
                     ),
@@ -631,7 +642,10 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Olivia()),
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              AlbumPage(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                        ),
                       );
                     },
                     child: Center(
@@ -639,10 +653,7 @@ class _HomeState extends State<Home> {
                         children: [
                           Image.asset('assets/images/guts.png', height: 100),
                           SizedBox(height: 5),
-                          Text(
-                            'Olivia Rodrigo Mix',
-                            style: TextStyle(fontSize: 10),
-                          ),
+                          Text('GUTS', style: TextStyle(fontSize: 10)),
                         ],
                       ),
                     ),
@@ -666,18 +677,22 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Nostolgia()),
+                        MaterialPageRoute(
+                          builder: (context) => PlaylistPage(
+                            playlistId: '2Uow2rC2RpEw5AEjoYxrZc',
+                          ),
+                        ),
                       );
                     },
                     child: Center(
                       child: Column(
                         children: [
-                          Image.asset('assets/images/a4.jpeg', height: 100),
-                          SizedBox(height: 5),
-                          Text(
-                            'Nostalgic Rewind',
-                            style: TextStyle(fontSize: 10),
+                          Image.asset(
+                            'assets/images/nostolgia.jpeg',
+                            height: 100,
                           ),
+                          SizedBox(height: 5),
+                          Text('Nostalgia.', style: TextStyle(fontSize: 10)),
                         ],
                       ),
                     ),
@@ -718,14 +733,20 @@ class _HomeState extends State<Home> {
                   GestureDetector(
                     onTap: () => Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Tckay()),
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            AlbumPage(albumId: '3TDqyvMmWlK34WpAxwG6hf'),
+                      ),
                     ),
                     child: Center(
                       child: Column(
                         children: [
                           Image.asset('assets/images/c4.jpg', height: 110),
                           SizedBox(height: 5),
-                          Text('This is Ckay', style: TextStyle(fontSize: 10)),
+                          Text(
+                            'Ckay The Second',
+                            style: TextStyle(fontSize: 10),
+                          ),
                         ],
                       ),
                     ),
@@ -734,7 +755,10 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Todumo()),
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              AlbumPage(albumId: '6e1McsPwHgiySHVlpZRhFx'),
+                        ),
                       );
                     },
                     child: Center(
@@ -754,7 +778,11 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Tseyi()),
+                        MaterialPageRoute(
+                          builder: (context) => PlaylistPage(
+                            playlistId: '5BaRk0mmuRfvfRgJjbgxfm',
+                          ),
+                        ),
                       );
                     },
                     child: Center(
@@ -775,7 +803,10 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Tnsg()),
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              AlbumPage(albumId: '3Uo1dpUULgBeWEgjf5AMsd'),
+                        ),
                       );
                     },
                     child: Center(
