@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flytime_spotify/album.dart';
 import 'package:flytime_spotify/artist/about.dart';
 import 'package:flytime_spotify/playlist/album.dart';
 import 'package:flytime_spotify/providers/expand.dart';
@@ -181,7 +182,10 @@ class _RemamusicState extends State<Remamusic> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Album()),
+              MaterialPageRoute(
+                builder: (context) =>
+                    AlbumPage(albumId: '27pA2FuPxbf7ukWvLhEvgV'),
+              ),
             );
           },
           child: SizedBox(

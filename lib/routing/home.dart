@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flytime_spotify/album.dart';
-import 'package:flytime_spotify/artist/rema.dart';
+import 'package:flytime_spotify/artist.dart';
 import 'package:flytime_spotify/playlist.dart';
 import 'package:flytime_spotify/playlist/chill.dart';
 import 'package:flytime_spotify/playlist/creul.dart';
@@ -308,7 +308,10 @@ class _HomeState extends State<Home> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Rema()),
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  Rema(artistId: '46pWGuE3dSwY3bMMXGBvVS'),
+                            ),
                           );
                         },
                         child: Container(

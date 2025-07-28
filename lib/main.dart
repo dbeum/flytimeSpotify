@@ -11,7 +11,9 @@ import 'package:flytime_spotify/providers/shuffle.dart';
 import 'package:flytime_spotify/providers/slidetrack.dart';
 
 import 'package:flytime_spotify/providers/selectedartist.dart';
+import 'package:flytime_spotify/routes.dart';
 import 'package:flytime_spotify/routing/home.dart';
+import 'package:flytime_spotify/welcome.dart';
 
 import 'package:provider/provider.dart';
 import 'package:flytime_spotify/providers/visibility.dart';
@@ -67,7 +69,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: Home(),
+      home: h1(),
       debugShowCheckedModeBanner: false,
     );
   }

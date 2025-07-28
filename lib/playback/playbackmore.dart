@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
-import 'package:flytime_spotify/artist/rema.dart';
+import 'package:flytime_spotify/artist.dart';
 import 'package:flytime_spotify/providers/play.dart';
 import 'package:provider/provider.dart';
 
@@ -78,10 +78,10 @@ class _PlaybackmoreState extends State<Playbackmore> {
                   SizedBox(height: 20),
                   Bounceable(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Rema()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => Rema()),
+                      // );
                     },
                     child: Row(
                       children: [
