@@ -60,7 +60,7 @@ class _HomeState extends State<Home> {
                 Container(
                   child: Row(
                     children: [
-                      Image.asset('assets/images/a1.jpeg', height: 50),
+                      Image.asset('assets/images/guts.png', height: 50),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -86,7 +86,7 @@ class _HomeState extends State<Home> {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                'Olivia Rodrigro Mix',
+                                'GUTS',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -104,7 +104,7 @@ class _HomeState extends State<Home> {
                 Container(
                   child: Row(
                     children: [
-                      Image.asset('assets/images/a2.jpeg', height: 50),
+                      Image.asset('assets/images/chill.jpeg', height: 50),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -154,7 +154,7 @@ class _HomeState extends State<Home> {
                   child: Row(
                     children: [
                       Image.asset(
-                        'assets/images/a3.jpeg',
+                        'assets/images/cruel.jpeg',
                         height: 50,
                         width: 50,
                       ),
@@ -162,7 +162,11 @@ class _HomeState extends State<Home> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Creul()),
+                            MaterialPageRoute(
+                              builder: (context) => PlaylistPage(
+                                playlistId: '2EMEoIYwiPecwKa5tOPbZm',
+                              ),
+                            ),
                           );
                         },
                         child: Container(
@@ -180,7 +184,7 @@ class _HomeState extends State<Home> {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                'Cruel Santino Mix',
+                                'Best of Cruel Santino',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -199,7 +203,7 @@ class _HomeState extends State<Home> {
                   child: Row(
                     children: [
                       Image.asset(
-                        'assets/images/a4.jpeg',
+                        'assets/images/nostolgia.jpeg',
                         height: 50,
                         width: 50,
                       ),
@@ -208,7 +212,9 @@ class _HomeState extends State<Home> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Nostolgia(),
+                              builder: (context) => PlaylistPage(
+                                playlistId: '2Uow2rC2RpEw5AEjoYxrZc',
+                              ),
                             ),
                           );
                         },
@@ -226,7 +232,7 @@ class _HomeState extends State<Home> {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                'Nostalgic Rewind',
+                                'Nostalgia.',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -249,12 +255,15 @@ class _HomeState extends State<Home> {
                 Container(
                   child: Row(
                     children: [
-                      Image.asset('assets/images/a5.jpeg', height: 50),
+                      Image.asset('assets/images/told.png', height: 50),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Onrepeat()),
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  AlbumPage(albumId: '5PKl5yyetQ6mFeWK6ONbSH'),
+                            ),
                           );
                         },
                         child: Container(
@@ -272,7 +281,7 @@ class _HomeState extends State<Home> {
                             children: [
                               SizedBox(width: 5),
                               Text(
-                                'On Repeat',
+                                'I Told Them...',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -366,15 +375,19 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Onrepeat()),
+                        MaterialPageRoute(
+                          builder: (context) => PlaylistPage(
+                            playlistId: '6mv2k2DBxZ516Cqcw1IZQE',
+                          ),
+                        ),
                       );
                     },
                     child: Center(
                       child: Column(
                         children: [
-                          Image.asset('assets/images/a5.jpeg', height: 110),
+                          Image.asset('assets/images/chill.jpeg', height: 110),
                           SizedBox(height: 5),
-                          Text('On Repeat', style: TextStyle(fontSize: 10)),
+                          Text('Chill Mix', style: TextStyle(fontSize: 10)),
                         ],
                       ),
                     ),
@@ -389,11 +402,19 @@ class _HomeState extends State<Home> {
                     child: Center(
                       child: Column(
                         children: [
-                          Image.asset('assets/images/a1.jpeg', height: 110),
+                          Image.asset(
+                            'assets/images/nostolgia.jpeg',
+                            height: 110,
+                          ),
                           SizedBox(height: 5),
-                          Text(
-                            'Olivia Rodrigo,Billie Eilish',
-                            style: TextStyle(fontSize: 10),
+                          Container(
+                            width: 100,
+                            child: Text(
+                              'Charlie Puth,Justin Bieber',
+                              style: TextStyle(fontSize: 10),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
                           ),
                         ],
                       ),
@@ -403,18 +424,19 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Chill()),
+                        MaterialPageRoute(
+                          builder: (context) => PlaylistPage(
+                            playlistId: '2EMEoIYwiPecwKa5tOPbZm',
+                          ),
+                        ),
                       );
                     },
                     child: Center(
                       child: Column(
                         children: [
-                          Image.asset('assets/images/a2.jpeg', height: 110),
+                          Image.asset('assets/images/cruel.jpeg', height: 110),
                           SizedBox(height: 5),
-                          Text(
-                            'Omah Lay,Ruger',
-                            style: TextStyle(fontSize: 10),
-                          ),
+                          Text('Cruel Santino', style: TextStyle(fontSize: 10)),
                         ],
                       ),
                     ),
@@ -615,7 +637,7 @@ class _HomeState extends State<Home> {
                     child: Center(
                       child: Column(
                         children: [
-                          Image.asset('assets/images/a1.jpeg', height: 100),
+                          Image.asset('assets/images/guts.png', height: 100),
                           SizedBox(height: 5),
                           Text(
                             'Olivia Rodrigo Mix',

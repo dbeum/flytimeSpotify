@@ -222,26 +222,38 @@ class _AlbumPageState extends State<AlbumPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: album.tracks.map((track) {
                         return ListTile(
-                          title: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                          title: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                track,
-                                style: const TextStyle(color: Colors.white),
-                              ),
-                              Row(
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.explicit, size: 13),
-                                  SizedBox(width: 2),
-                                  Text(
-                                    album.artist,
-                                    style: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 13,
+                                  Container(
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.7,
+                                    child: Text(
+                                      track,
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                      style: TextStyle(color: Colors.white),
                                     ),
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(Icons.explicit, size: 13),
+                                      SizedBox(width: 2),
+                                      Text(
+                                        album.artist,
+                                        style: const TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 13,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
+                              Icon(Icons.more_horiz),
                             ],
                           ),
 

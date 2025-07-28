@@ -223,26 +223,39 @@ class _PlaylistPageState extends State<PlaylistPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: playlist.tracks.map((track) {
                         return ListTile(
-                          title: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                          title: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                track,
-                                style: const TextStyle(color: Colors.white),
-                              ),
-                              Row(
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.explicit, size: 13),
-                                  SizedBox(width: 2),
-                                  Text(
-                                    playlist.name,
-                                    style: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 13,
+                                  Container(
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.7,
+                                    child: Text(
+                                      track,
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                      style: TextStyle(color: Colors.white),
                                     ),
+                                  ),
+
+                                  Row(
+                                    children: [
+                                      Icon(Icons.explicit, size: 13),
+                                      SizedBox(width: 2),
+                                      Text(
+                                        playlist.name,
+                                        style: const TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 13,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
+                              Icon(Icons.more_horiz),
                             ],
                           ),
 
