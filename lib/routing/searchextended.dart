@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/album.dart';
+import 'package:flytime_spotify/album/album.dart';
 import 'package:flytime_spotify/models/albumsearch.dart';
 import 'package:flytime_spotify/models/playlist.dart';
 import 'package:flytime_spotify/models/album.dart';

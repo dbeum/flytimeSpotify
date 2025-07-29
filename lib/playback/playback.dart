@@ -321,7 +321,7 @@ class _PlaybackState extends State<Playback> {
                                         ),
                                       ],
                                     ),
-                                    SizedBox(height: 50),
+                                    SizedBox(height: 30),
                                     Padding(
                                       padding: EdgeInsetsGeometry.all(10),
                                       child: Column(
@@ -395,7 +395,7 @@ class _PlaybackState extends State<Playback> {
                                                         fontWeight:
                                                             FontWeight.bold,
                                                         color: Colors.black,
-                                                        fontSize: 20,
+                                                        fontSize: 17,
                                                       ),
                                                     ),
                                                   ),

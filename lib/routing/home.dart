@@ -1,21 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/album.dart';
+import 'package:flytime_spotify/album/album.dart';
 import 'package:flytime_spotify/artist.dart';
-import 'package:flytime_spotify/playlist.dart';
-import 'package:flytime_spotify/playlist/chill.dart';
-import 'package:flytime_spotify/playlist/creul.dart';
-import 'package:flytime_spotify/playlist/drake.dart';
-import 'package:flytime_spotify/playlist/grime.dart';
-import 'package:flytime_spotify/playlist/nostolgia.dart';
-import 'package:flytime_spotify/playlist/olivia.dart';
-import 'package:flytime_spotify/playlist/onRepeat.dart';
-import 'package:flytime_spotify/playlist/pop.dart';
-import 'package:flytime_spotify/playlist/tckay.dart';
-import 'package:flytime_spotify/playlist/tnsg.dart';
-import 'package:flytime_spotify/playlist/todumo.dart';
-import 'package:flytime_spotify/playlist/tseyi.dart';
-import 'package:flytime_spotify/playlist/upbeat.dart';
+import 'package:flytime_spotify/playlist/playlist.dart';
+
+import 'package:flytime_spotify/routing/settings.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -31,7 +20,7 @@ class _HomeState extends State<Home> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 60),
+            SizedBox(height: 55),
             Container(
               padding: EdgeInsets.all(10),
               child: Row(
@@ -46,8 +35,19 @@ class _HomeState extends State<Home> {
                       Icon(Icons.notifications_outlined, color: Colors.white),
                       SizedBox(width: 10),
                       Icon(Icons.history, color: Colors.white),
-                      SizedBox(width: 10),
-                      Icon(Icons.settings_outlined, color: Colors.white),
+                      //SizedBox(width: 1),
+                      IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Settings()),
+                          );
+                        },
+                        icon: Icon(
+                          Icons.settings_outlined,
+                          color: Colors.white,
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -505,7 +505,10 @@ class _HomeState extends State<Home> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Grime()),
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              AlbumPage(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                        ),
                       );
                     },
                     child: Center(
@@ -661,19 +664,32 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(360)),
-                          child: Image.asset(
-                            'assets/images/rema.jpg',
-                            height: 100,
-                          ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              Rema(artistId: '46pWGuE3dSwY3bMMXGBvVS'),
                         ),
-                        SizedBox(height: 5),
-                        Text('Rema', style: TextStyle(fontSize: 10)),
-                      ],
+                      );
+                    },
+                    child: Center(
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(360),
+                            ),
+                            child: Image.asset(
+                              'assets/images/rema.jpg',
+                              height: 100,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text('Rema', style: TextStyle(fontSize: 10)),
+                        ],
+                      ),
                     ),
                   ),
                   GestureDetector(

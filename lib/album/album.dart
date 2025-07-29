@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flytime_spotify/models/album.dart';
+import 'package:flytime_spotify/playback/playback.dart';
 import 'package:flytime_spotify/providers/download.dart';
 import 'package:flytime_spotify/providers/play.dart';
 import 'package:flytime_spotify/services/spotify_service.dart';
@@ -275,10 +276,7 @@ class _AlbumPageState extends State<AlbumPage> {
                             ],
                           ),
 
-                          onTap: () {
-                            // TODO: play the song / open mini player
-                            print('Tapped on $track');
-                          },
+                          onTap: () {},
                         );
                       }).toList(),
                     ),

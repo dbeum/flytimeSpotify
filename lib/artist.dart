@@ -243,6 +243,7 @@ class _RemaState extends State<Rema> {
                                     ),
                                   ],
                                 ),
+                                SizedBox(height: 50),
                               ],
                             ),
                           )
@@ -300,6 +301,7 @@ class _RemaState extends State<Rema> {
                               ],
                             ),
                           ),
+                        SizedBox(height: 50),
                       ],
                     ),
                   ),

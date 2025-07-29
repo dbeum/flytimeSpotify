@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/playlist/nostolgia.dart';
+import 'package:flytime_spotify/album/album.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -91,7 +91,10 @@ class _ProfileState extends State<Profile> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Nostolgia()),
+                MaterialPageRoute(
+                  builder: (context) =>
+                      AlbumPage(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                ),
               );
             },
             child: Row(
@@ -100,7 +103,7 @@ class _ProfileState extends State<Profile> {
                 Row(
                   children: [
                     SizedBox(width: 20),
-                    Image.asset('assets/images/a4.jpeg', height: 50),
+                    Image.asset('assets/images/guts.png', height: 50),
                     SizedBox(width: 10),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
