@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/album.dart';
 import 'package:flytime_spotify/models/albumsearch.dart';
 import 'package:flytime_spotify/models/playlist.dart';
 import 'package:flytime_spotify/models/album.dart';
@@ -13,32 +14,31 @@ class Searchextended extends StatefulWidget {
 }
 
 class _SearchextendedState extends State<Searchextended> {
-  final SpotifyService _spotifyService = SpotifyService();
   final TextEditingController _controller = TextEditingController();
-
-  List<AlbumSearch> _albums = [];
-  List<PlaylistSearch> _playlists = [];
+  List<Album> _searchResults = [];
   bool _isLoading = false;
+  String? _error;
 
-  void _performSearch() async {
-    final query = _controller.text.trim();
+  void _search(String query) async {
     if (query.isEmpty) return;
 
-    setState(() => _isLoading = true);
+    setState(() {
+      _isLoading = true;
+      _error = null;
+    });
 
     try {
-      final results = await _spotifyService.search(query);
+      final results = await SpotifyService().searchAlbums(query);
       setState(() {
-        _albums = List<AlbumSearch>.from(results['albums'] ?? []);
-        _playlists = List<PlaylistSearch>.from(results['playlists'] ?? []);
+        _searchResults = results;
+        _isLoading = false;
       });
     } catch (e) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Search failed')));
+      setState(() {
+        _error = e.toString();
+        _isLoading = false;
+      });
     }
-
-    setState(() => _isLoading = false);
   }
 
   @override
@@ -75,7 +75,14 @@ class _SearchextendedState extends State<Searchextended> {
                         fontSize: 15,
                         color: Colors.grey,
                       ),
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.search, color: Colors.transparent),
+                        onPressed: () {
+                          _search(_controller.text.trim());
+                        },
+                      ),
                     ),
+                    onSubmitted: (value) => _search(value.trim()),
                   ),
                 ),
                 TextButton(
@@ -92,56 +99,51 @@ class _SearchextendedState extends State<Searchextended> {
                 'Recent searches',
                 style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
               ),
+
             Center(
               child: Text(
                 'Your recent searches will appear here',
                 style: TextStyle(color: Colors.grey),
               ),
             ),
+
             if (_isLoading)
-              const Center(child: CircularProgressIndicator())
+              Center(child: CircularProgressIndicator())
+            else if (_error != null)
+              Center(child: Text('Error: $_error'))
             else
               Expanded(
-                child: ListView(
-                  children: [
-                    if (_albums.isNotEmpty) ...[
-                      const Text(
-                        'Albums',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                child: ListView.builder(
+                  itemCount: _searchResults.length,
+                  itemBuilder: (context, index) {
+                    final album = _searchResults[index];
+                    return ListTile(
+                      leading: album.imageUrl.isNotEmpty
+                          ? Image.network(
+                              album.imageUrl,
+                              width: 50,
+                              fit: BoxFit.cover,
+                            )
+                          : SizedBox(width: 50),
+                      title: Text(
+                        album.name,
+                        style: TextStyle(color: Colors.white),
                       ),
-                      ..._albums.map(
-                        (album) => ListTile(
-                          title: Text(album.name),
-                          subtitle: Text(album.artist),
-                          leading: Image.network(
-                            album.imageUrl,
-                            width: 50,
-                            height: 50,
-                            fit: BoxFit.cover,
+                      subtitle: Text(
+                        album.artist,
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                      onTap: () {
+                        // Navigate to album detail page
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => AlbumPage(albumId: album.albumId),
                           ),
-                        ),
-                      ),
-                    ],
-                    if (_playlists.isNotEmpty) ...[
-                      const SizedBox(height: 20),
-                      const Text(
-                        'Playlists',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      ..._playlists.map(
-                        (playlist) => ListTile(
-                          title: Text(playlist.name),
-                          //  subtitle: Text(playlist.artist),
-                          leading: Image.network(
-                            playlist.imageUrl,
-                            width: 50,
-                            height: 50,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ],
+                        );
+                      },
+                    );
+                  },
                 ),
               ),
           ],

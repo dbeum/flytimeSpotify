@@ -4,6 +4,7 @@ import 'package:flytime_spotify/models/playlist.dart';
 import 'package:flytime_spotify/providers/download.dart';
 import 'package:flytime_spotify/providers/play.dart';
 import 'package:flytime_spotify/services/spotifyplaylist_service.dart';
+import 'package:palette_generator/palette_generator.dart';
 import 'package:provider/provider.dart';
 
 class PlaylistPage extends StatefulWidget {
@@ -16,11 +17,28 @@ class PlaylistPage extends StatefulWidget {
 
 class _PlaylistPageState extends State<PlaylistPage> {
   late Future<Playlist> _playlistFuture;
-
+  Color _topColor = Colors.black;
   @override
   void initState() {
     super.initState();
     _playlistFuture = SpotifyService().fetchPlaylistById(widget.playlistId);
+    _playlistFuture.then((album) {
+      _updatePalette(album.imageUrl);
+    });
+  }
+
+  Future<void> _updatePalette(String imageUrl) async {
+    final PaletteGenerator paletteGenerator =
+        await PaletteGenerator.fromImageProvider(
+          NetworkImage(imageUrl),
+          size: const Size(200, 200),
+          maximumColorCount: 5,
+        );
+
+    setState(() {
+      _topColor = paletteGenerator.dominantColor?.color ?? Colors.brown;
+      //_bottomColor = Colors.black; // or use a mutedColor, or Vibrant
+    });
   }
 
   @override
@@ -50,7 +68,7 @@ class _PlaylistPageState extends State<PlaylistPage> {
                       ),
                       gradient: LinearGradient(
                         colors: [
-                          Colors.brown,
+                          _topColor,
                           Color.fromARGB(255, 18, 18, 18),
                         ], // Gradient colors
                         begin: Alignment.topCenter, // Start point

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/album.dart';
 import 'package:flytime_spotify/playlist/nostolgia.dart';
 import 'package:flytime_spotify/playlist/olivia.dart';
 import 'package:flytime_spotify/playlist/onRepeat.dart';
@@ -55,26 +56,26 @@ class _LibraryState extends State<Library> {
             ),
           ],
         ),
-        actions: [
-          GestureDetector(
-            onTap: () {
-              showModalBottomSheet(
-                context: context,
-                isScrollControlled: true,
-                backgroundColor: Color.fromARGB(255, 18, 18, 18),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                builder: (context) {
-                  return FractionallySizedBox(
-                    heightFactor: 1,
-                    child: Librarysearch(),
-                  );
-                },
-              );
-            },
-            child: Icon(Icons.search, color: Colors.white, size: 30),
-          ),
-          SizedBox(width: 10),
-        ],
+        // actions: [
+        //   GestureDetector(
+        //     onTap: () {
+        //       showModalBottomSheet(
+        //         context: context,
+        //         isScrollControlled: true,
+        //         backgroundColor: Color.fromARGB(255, 18, 18, 18),
+        //         shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        //         builder: (context) {
+        //           return FractionallySizedBox(
+        //             heightFactor: 1,
+        //             child: Librarysearch(),
+        //           );
+        //         },
+        //       );
+        //     },
+        //     child: Icon(Icons.search, color: Colors.white, size: 30),
+        //   ),
+        //   SizedBox(width: 10),
+        // ],
       ),
       body: Container(
         padding: EdgeInsets.all(15),
@@ -88,87 +89,27 @@ class _LibraryState extends State<Library> {
                 Text('Recents', style: TextStyle(fontWeight: FontWeight.bold)),
               ],
             ),
+
             SizedBox(height: 20),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Onrepeat()),
-                );
-              },
-              child: Row(
-                children: [
-                  Image.asset('assets/images/a5.jpeg', height: 65),
-                  SizedBox(width: 10),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'On Repeat',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                      ),
-                      Text(
-                        'Playlist•user',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        AlbumPage(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
                   ),
-                ],
-              ),
-            ),
-            SizedBox(height: 20),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Olivia()),
                 );
               },
               child: Row(
                 children: [
-                  Image.asset('assets/images/a1.jpeg', height: 65),
+                  Image.asset('assets/images/guts.png', height: 65),
                   SizedBox(width: 10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Olivia Rodrigro Mix',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                      ),
-                      Text(
-                        'Playlist•user',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 20),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Nostolgia()),
-                );
-              },
-              child: Row(
-                children: [
-                  Image.asset('assets/images/a4.jpeg', height: 65),
-                  SizedBox(width: 10),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Nostalgic Rewind',
+                        'GUTS',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,

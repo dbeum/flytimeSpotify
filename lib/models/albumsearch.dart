@@ -13,10 +13,14 @@ class AlbumSearch {
 
   factory AlbumSearch.fromJson(Map<String, dynamic> json) {
     return AlbumSearch(
-      name: json['name'] ?? 'unknown artist',
-      imageUrl: json['images'][0]['url'],
-      artist: json['artists'][0]['name'],
-      albumId: json['id'],
+      name: json['name'] ?? 'Unknown',
+      imageUrl: (json['images'] != null && json['images'].isNotEmpty)
+          ? json['images'][0]['url']
+          : '',
+      artist: (json['artists'] != null && json['artists'].isNotEmpty)
+          ? json['artists'][0]['name']
+          : 'Unknown Artist',
+      albumId: json['id'] ?? '',
     );
   }
 }

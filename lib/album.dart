@@ -3,6 +3,7 @@ import 'package:flytime_spotify/models/album.dart';
 import 'package:flytime_spotify/providers/download.dart';
 import 'package:flytime_spotify/providers/play.dart';
 import 'package:flytime_spotify/services/spotify_service.dart';
+import 'package:palette_generator/palette_generator.dart';
 import 'package:provider/provider.dart';
 
 class AlbumPage extends StatefulWidget {
@@ -15,11 +16,28 @@ class AlbumPage extends StatefulWidget {
 
 class _AlbumPageState extends State<AlbumPage> {
   late Future<Album> _albumFuture;
-
+  Color _topColor = Colors.black;
   @override
   void initState() {
     super.initState();
     _albumFuture = SpotifyService().fetchAlbumById(widget.albumId);
+    _albumFuture.then((album) {
+      _updatePalette(album.imageUrl);
+    });
+  }
+
+  Future<void> _updatePalette(String imageUrl) async {
+    final PaletteGenerator paletteGenerator =
+        await PaletteGenerator.fromImageProvider(
+          NetworkImage(imageUrl),
+          size: const Size(200, 200),
+          maximumColorCount: 5,
+        );
+
+    setState(() {
+      _topColor = paletteGenerator.dominantColor?.color ?? Colors.brown;
+      //_bottomColor = Colors.black; // or use a mutedColor, or Vibrant
+    });
   }
 
   @override
@@ -49,7 +67,7 @@ class _AlbumPageState extends State<AlbumPage> {
                       ),
                       gradient: LinearGradient(
                         colors: [
-                          Colors.brown,
+                          _topColor,
                           Color.fromARGB(255, 18, 18, 18),
                         ], // Gradient colors
                         begin: Alignment.topCenter, // Start point

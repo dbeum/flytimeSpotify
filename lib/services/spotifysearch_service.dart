@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:flytime_spotify/models/albumsearch.dart';
-import 'package:flytime_spotify/models/playlistsearch.dart';
+import 'package:flytime_spotify/models/album.dart';
+import 'package:flytime_spotify/models/artist.dart';
 import 'package:http/http.dart' as http;
 
 class SpotifyService {
@@ -24,32 +24,91 @@ class SpotifyService {
     }
   }
 
-  Future<Map<String, dynamic>> search(String query) async {
+  Future<Album> fetchAlbumById(String albumId) async {
     final token = await _getToken();
-    final encodedQuery = Uri.encodeComponent(query);
+    final res = await http.get(
+      Uri.parse('https://api.spotify.com/v1/albums/$albumId'),
+      headers: {'Authorization': 'Bearer $token'},
+    );
+
+    if (res.statusCode == 200) {
+      final albumJson = jsonDecode(res.body);
+      // print(jsonEncode(albumJson));
+      return Album.fromJson(albumJson);
+    } else {
+      throw Exception('Failed to load album');
+    }
+  }
+
+  Future<Artist> fetchArtistById(String artistId) async {
+    final token = await _getToken();
+    final res = await http.get(
+      Uri.parse('https://api.spotify.com/v1/artists/$artistId'),
+      headers: {'Authorization': 'Bearer $token'},
+    );
+
+    if (res.statusCode == 200) {
+      final artistJson = jsonDecode(res.body);
+      // print(jsonEncode(albumJson));
+      return Artist.fromJson(artistJson);
+    } else {
+      throw Exception('Failed to load artist');
+    }
+  }
+
+  Future<List<Album>> searchAlbums(String query) async {
+    final token = await _getToken();
     final res = await http.get(
       Uri.parse(
-        'https://api.spotify.com/v1/search?q=$encodedQuery&type=album,playlist&limit=10',
+        'https://api.spotify.com/v1/search?q=$query&type=album&limit=20',
       ),
       headers: {'Authorization': 'Bearer $token'},
     );
 
     if (res.statusCode == 200) {
-      final data = jsonDecode(res.body);
+      final jsonResult = jsonDecode(res.body);
+      final albumsJson = jsonResult['albums']['items'] as List<dynamic>;
 
-      final albums = (data['albums']['items'] as List)
-          .map((item) => AlbumSearch.fromJson(item))
-          .toList();
-
-      final playlists = (data['playlists']['items'] as List)
-          .map((item) => PlaylistSearch.fromJson(item))
-          .toList();
-
-      return {'albums': albums, 'playlists': playlists};
+      // Convert each album json to Album model (you might want a smaller model for search)
+      return albumsJson.map((albumJson) {
+        return Album(
+          name: albumJson['name'] ?? 'Unknown',
+          imageUrl:
+              (albumJson['images'] != null && albumJson['images'].isNotEmpty)
+              ? albumJson['images'][0]['url']
+              : '',
+          artist:
+              (albumJson['artists'] != null && albumJson['artists'].isNotEmpty)
+              ? albumJson['artists'][0]['name']
+              : 'Unknown Artist',
+          albumId: albumJson['id'] ?? '',
+          tracks:
+              [], // search results don't contain track info, keep empty here
+        );
+      }).toList();
     } else {
-      print('Search failed: ${res.statusCode}');
-      print(res.body);
-      throw Exception('Failed to search');
+      throw Exception('Failed to search albums');
+    }
+  }
+
+  Future<List<Artist>> searchArtists(String query) async {
+    final token = await _getToken();
+    final res = await http.get(
+      Uri.parse(
+        'https://api.spotify.com/v1/search?q=$query&type=artist&limit=20',
+      ),
+      headers: {'Authorization': 'Bearer $token'},
+    );
+
+    if (res.statusCode == 200) {
+      final jsonResult = jsonDecode(res.body);
+      final artistsJson = jsonResult['artists']['items'] as List<dynamic>;
+
+      return artistsJson.map((artistJson) {
+        return Artist.fromJson(artistJson);
+      }).toList();
+    } else {
+      throw Exception('Failed to search artists');
     }
   }
 }
