@@ -33,7 +33,7 @@ class SpotifyService {
 
     if (res.statusCode == 200) {
       final artistJson = jsonDecode(res.body);
-      // print(jsonEncode(albumJson));
+
       return Artist.fromJson(artistJson);
     } else {
       throw Exception('Failed to load artist');

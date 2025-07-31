@@ -15,7 +15,6 @@ class _ShareState extends State<Share> {
         child: Column(
           children: [
             Container(
-              // height: MediaQuery,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -30,7 +29,6 @@ class _ShareState extends State<Share> {
                 children: [
                   SizedBox(height: 40),
                   Row(
-                    //mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       GestureDetector(
                         onTap: () {
@@ -78,11 +76,7 @@ class _ShareState extends State<Share> {
                   ),
                   Text(
                     'Rema',
-                    style: TextStyle(
-                      // fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Colors.grey,
-                    ),
+                    style: TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.18),
                   Row(

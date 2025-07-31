@@ -10,7 +10,7 @@ import 'package:flytime_spotify/providers/play.dart';
 import 'package:flytime_spotify/providers/shuffle.dart';
 import 'package:flytime_spotify/providers/slidetrack.dart';
 import 'package:flytime_spotify/providers/selectedartist.dart';
-import 'package:flytime_spotify/routes.dart';
+
 import 'package:flytime_spotify/routing/home.dart';
 import 'package:flytime_spotify/welcome.dart';
 import 'package:provider/provider.dart';
@@ -52,12 +52,11 @@ class MainApp extends StatelessWidget {
           bodyMedium: TextStyle(color: Colors.white),
           bodySmall: TextStyle(color: Colors.white),
         ),
-        // Other theme settings...
       ),
       darkTheme: ThemeData(
-        brightness: Brightness.dark, // Dark theme
+        brightness: Brightness.dark,
         useMaterial3: true,
-        // Define your dark theme here
+
         primarySwatch: Colors.deepOrange,
         scaffoldBackgroundColor: Color.fromARGB(255, 18, 18, 18),
         textTheme: TextTheme(
@@ -67,7 +66,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: MainScaffold(),
+      home: Welcome(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -134,7 +134,6 @@ class _SearchextendedState extends State<Searchextended> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       onTap: () {
-                        // Navigate to album detail page
                         Navigator.push(
                           context,
                           MaterialPageRoute(

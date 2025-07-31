@@ -36,6 +36,7 @@ class _WelcomeState extends State<Welcome> {
             ),
           ),
           SizedBox(height: 50),
+
           //Routes
           Align(
             alignment: Alignment.bottomCenter,

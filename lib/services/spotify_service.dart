@@ -32,7 +32,7 @@ class SpotifyService {
 
     if (res.statusCode == 200) {
       final albumJson = jsonDecode(res.body);
-      // print(jsonEncode(albumJson));
+
       return Album.fromJson(albumJson);
     } else {
       throw Exception('Failed to load album');

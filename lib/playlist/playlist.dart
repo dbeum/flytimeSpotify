@@ -37,7 +37,6 @@ class _PlaylistPageState extends State<PlaylistPage> {
 
     setState(() {
       _topColor = paletteGenerator.dominantColor?.color ?? Colors.brown;
-      //_bottomColor = Colors.black; // or use a mutedColor, or Vibrant
     });
   }
 
@@ -67,12 +66,9 @@ class _PlaylistPageState extends State<PlaylistPage> {
                         bottomLeft: Radius.circular(18),
                       ),
                       gradient: LinearGradient(
-                        colors: [
-                          _topColor,
-                          Color.fromARGB(255, 18, 18, 18),
-                        ], // Gradient colors
-                        begin: Alignment.topCenter, // Start point
-                        end: Alignment.bottomCenter, // End point
+                        colors: [_topColor, Color.fromARGB(255, 18, 18, 18)],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
                       ),
                     ),
                     child: Column(
@@ -204,9 +200,8 @@ class _PlaylistPageState extends State<PlaylistPage> {
                                   ),
                           ),
 
-                          // SizedBox(width: 10),
                           Image.asset('assets/images/p1.png'),
-                          //   SizedBox(width: 10),
+
                           Icon(Icons.more_horiz, color: Colors.grey),
                         ],
                       ),
@@ -278,7 +273,6 @@ class _PlaylistPageState extends State<PlaylistPage> {
                           ),
 
                           onTap: () {
-                            // TODO: play the song / open mini player
                             print('Tapped on $track');
                           },
                         );

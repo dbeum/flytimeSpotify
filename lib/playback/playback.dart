@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
+import 'package:flytime_spotify/playback/playbackmore.dart';
 import 'package:flytime_spotify/playback/queue.dart';
 import 'package:flytime_spotify/playback/share.dart';
 import 'package:flytime_spotify/providers/expand.dart';
@@ -71,10 +72,18 @@ class _PlaybackState extends State<Playback> {
                       child: Icon(Icons.arrow_back_ios, color: Colors.white),
                     ),
                   ),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.3),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.33),
                   Text('Playing Song'),
-                  SizedBox(width: MediaQuery.of(context).size.width * 0.3),
-                  Icon(Icons.more_horiz, color: Colors.white),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.27),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Playbackmore()),
+                      );
+                    },
+                    icon: Icon(Icons.more_horiz, color: Colors.white),
+                  ),
                 ],
               ),
               SizedBox(height: 60),
@@ -133,15 +142,11 @@ class _PlaybackState extends State<Playback> {
                 onHorizontalDragUpdate: (details) {
                   setState(() {
                     _progress += details.delta.dx / totalWidth;
-                    _progress = _progress.clamp(
-                      0.0,
-                      1.0,
-                    ); // keep between 0 and 1
+                    _progress = _progress.clamp(0.0, 1.0);
                   });
                 },
                 child: Stack(
                   children: [
-                    // Background line
                     Container(
                       height: 6,
                       width: MediaQuery.of(context).size.width * 0.9,
@@ -150,7 +155,7 @@ class _PlaybackState extends State<Playback> {
                         borderRadius: BorderRadius.circular(2),
                       ),
                     ),
-                    // Progress filled line
+
                     Container(
                       height: 6,
                       width: totalWidth * _progress,
@@ -159,7 +164,7 @@ class _PlaybackState extends State<Playback> {
                         borderRadius: BorderRadius.circular(2),
                       ),
                     ),
-                    // Thumb knob
+
                     Positioned(
                       left: totalWidth * _progress - 6,
                       child: Container(

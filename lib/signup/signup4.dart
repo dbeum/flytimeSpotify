@@ -26,7 +26,7 @@ class _Signup4State extends State<Signup4> {
         return Theme(
           data: ThemeData.dark().copyWith(
             colorScheme: ColorScheme.dark(
-              primary: Color(0xFF1ED760), // Spotify green
+              primary: Color(0xFF1ED760),
               onPrimary: Colors.black,
               surface: Color(0xFF121212),
               onSurface: Colors.white,

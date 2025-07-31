@@ -69,7 +69,6 @@ class SpotifyService {
       final jsonResult = jsonDecode(res.body);
       final albumsJson = jsonResult['albums']['items'] as List<dynamic>;
 
-      // Convert each album json to Album model (you might want a smaller model for search)
       return albumsJson.map((albumJson) {
         return Album(
           name: albumJson['name'] ?? 'Unknown',
@@ -82,8 +81,7 @@ class SpotifyService {
               ? albumJson['artists'][0]['name']
               : 'Unknown Artist',
           albumId: albumJson['id'] ?? '',
-          tracks:
-              [], // search results don't contain track info, keep empty here
+          tracks: [],
         );
       }).toList();
     } else {

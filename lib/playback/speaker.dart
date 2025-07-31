@@ -22,7 +22,7 @@ class _SpeakerState extends State<Speaker> {
             });
           },
           child: AnimatedContainer(
-            width: _isExpanded ? 100.0 : 150.0, // Width changes on tap
+            width: _isExpanded ? 100.0 : 150.0,
             height: 200.0,
             duration: Duration(seconds: 1),
             curve: Curves.easeInOut,

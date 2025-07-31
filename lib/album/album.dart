@@ -37,7 +37,6 @@ class _AlbumPageState extends State<AlbumPage> {
 
     setState(() {
       _topColor = paletteGenerator.dominantColor?.color ?? Colors.brown;
-      //_bottomColor = Colors.black; // or use a mutedColor, or Vibrant
     });
   }
 
@@ -112,28 +111,9 @@ class _AlbumPageState extends State<AlbumPage> {
                         Row(
                           children: [
                             SizedBox(width: 15),
-                            Container(
-                              height: 20,
-                              width: 20,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(360),
-                                ),
-                                color: Colors.blue,
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'U',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(width: 10),
+
                             Text(
-                              'User',
+                              album.artist,
                               style: TextStyle(
                                 fontSize: 10,
                                 fontWeight: FontWeight.bold,
@@ -204,9 +184,8 @@ class _AlbumPageState extends State<AlbumPage> {
                                   ),
                           ),
 
-                          // SizedBox(width: 10),
                           Image.asset('assets/images/p1.png'),
-                          //   SizedBox(width: 10),
+
                           Icon(Icons.more_horiz, color: Colors.grey),
                         ],
                       ),

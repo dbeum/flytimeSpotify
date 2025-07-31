@@ -77,12 +77,7 @@ class _PlaybackmoreState extends State<Playbackmore> {
                   ),
                   SizedBox(height: 20),
                   Bounceable(
-                    onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => Rema()),
-                      // );
-                    },
+                    onTap: () {},
                     child: Row(
                       children: [
                         Image.asset('assets/images/v2.png'),
@@ -99,15 +94,7 @@ class _PlaybackmoreState extends State<Playbackmore> {
                       Text('Share', style: TextStyle(fontSize: 20)),
                     ],
                   ),
-                  SizedBox(height: 20),
 
-                  Row(
-                    children: [
-                      Image.asset('assets/images/love.png'),
-                      SizedBox(width: 15),
-                      Text('Like all Songs', style: TextStyle(fontSize: 20)),
-                    ],
-                  ),
                   SizedBox(height: 20),
                   Row(
                     children: [

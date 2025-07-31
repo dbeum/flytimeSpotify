@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
                       Icon(Icons.notifications_outlined, color: Colors.white),
                       SizedBox(width: 10),
                       Icon(Icons.history, color: Colors.white),
-                      //SizedBox(width: 1),
+
                       IconButton(
                         onPressed: () {
                           Navigator.push(
@@ -364,8 +364,7 @@ class _HomeState extends State<Home> {
               child: CarouselSlider(
                 options: CarouselOptions(
                   height: 145.0,
-                  //  autoPlay: true,
-                  // enlargeCenterPage: true,
+
                   aspectRatio: 16 / 9,
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
@@ -448,26 +447,6 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                  // GestureDetector(
-                  //   onTap: () {
-                  //     Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(builder: (context) => Nostolgia()),
-                  //     );
-                  //   },
-                  //   child: Center(
-                  //     child: Column(
-                  //       children: [
-                  //         Image.asset('assets/images/nostolgia.png', height: 110),
-                  //         SizedBox(height: 5),
-                  //         Text(
-                  //           'Nostalgic Rewind',
-                  //           style: TextStyle(fontSize: 10),
-                  //         ),
-                  //       ],
-                  //     ),
-                  //   ),
-                  // ),
                 ],
               ),
             ),
@@ -491,8 +470,7 @@ class _HomeState extends State<Home> {
               child: CarouselSlider(
                 options: CarouselOptions(
                   height: 145.0,
-                  //  autoPlay: true,
-                  // enlargeCenterPage: true,
+
                   aspectRatio: 16 / 9,
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
@@ -613,8 +591,7 @@ class _HomeState extends State<Home> {
               child: CarouselSlider(
                 options: CarouselOptions(
                   height: 140.0,
-                  //  autoPlay: true,
-                  // enlargeCenterPage: true,
+
                   aspectRatio: 16 / 9,
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
@@ -739,8 +716,7 @@ class _HomeState extends State<Home> {
               child: CarouselSlider(
                 options: CarouselOptions(
                   height: 145.0,
-                  //  autoPlay: true,
-                  // enlargeCenterPage: true,
+
                   aspectRatio: 16 / 9,
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: false,
