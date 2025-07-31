@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flytime_spotify/album/album.dart';
-import 'package:flytime_spotify/artist/about.dart';
+import 'package:flytime_spotify/src/feature/album/view/album_view.dart';
+import 'package:flytime_spotify/src/feature/artist/about.dart';
 
 import 'package:flytime_spotify/providers/expand.dart';
 import 'package:provider/provider.dart';
@@ -184,7 +184,7 @@ class _RemamusicState extends State<Remamusic> {
               context,
               MaterialPageRoute(
                 builder: (context) =>
-                    AlbumPage(albumId: '27pA2FuPxbf7ukWvLhEvgV'),
+                    AlbumView(albumId: '27pA2FuPxbf7ukWvLhEvgV'),
               ),
             );
           },

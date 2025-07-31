@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/album/album.dart';
+import 'package:flytime_spotify/src/feature/album/view/album_view.dart';
 import 'package:flytime_spotify/models/albumsearch.dart';
 import 'package:flytime_spotify/models/playlist.dart';
 import 'package:flytime_spotify/models/album.dart';
 import 'package:flytime_spotify/models/playlistsearch.dart';
-import 'package:flytime_spotify/services/spotifysearch_service.dart';
+import 'package:flytime_spotify/src/services/spotifysearch_service.dart';
 
 class Searchextended extends StatefulWidget {
   const Searchextended({super.key});
@@ -137,7 +137,7 @@ class _SearchextendedState extends State<Searchextended> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => AlbumPage(albumId: album.albumId),
+                            builder: (_) => AlbumView(albumId: album.albumId),
                           ),
                         );
                       },
