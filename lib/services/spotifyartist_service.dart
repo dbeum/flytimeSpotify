@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:flytime_spotify/models/album.dart';
-import 'package:flytime_spotify/models/artist.dart';
+
+import 'package:flytime_spotify/feature/artist/model/artist.dart';
 import 'package:http/http.dart' as http;
 
 class SpotifyService {

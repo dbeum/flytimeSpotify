@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/src/feature/album/model/album_model.dart';
-import 'package:flytime_spotify/src/services/spotify_service.dart';
+import 'package:flytime_spotify/feature/album/model/album_model.dart';
+import 'package:flytime_spotify/services/spotify_service.dart';
 import 'package:palette_generator/palette_generator.dart';
 
 class AlbumController with ChangeNotifier {
-  late Future<Album> _albumFuture;
-  Future<Album> get albumFuture => _albumFuture;
+  late Future<AlbumModel> _albumFuture;
+  Future<AlbumModel> get albumFuture => _albumFuture;
 
   Color _topColor = Colors.black;
   Color get topColor => _topColor;

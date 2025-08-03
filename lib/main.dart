@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flytime_spotify/navbar.dart';
-import 'package:flytime_spotify/playback/playback.dart';
+import 'package:flytime_spotify/feature/playback/playback.dart';
 import 'package:flytime_spotify/providers/download.dart';
 import 'package:flytime_spotify/providers/expand.dart';
 import 'package:flytime_spotify/providers/like.dart';

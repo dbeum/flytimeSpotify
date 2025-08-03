@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/album/album.dart';
+import 'package:flytime_spotify/feature/album/controller/album_controller.dart';
+import 'package:flytime_spotify/feature/album/view/album_view.dart';
 
 import 'package:flytime_spotify/routing/profile.dart';
 import 'package:flytime_spotify/routing/librarysearch.dart';
+import 'package:provider/provider.dart';
 
 class Library extends StatefulWidget {
   const Library({super.key});
@@ -74,8 +76,14 @@ class _LibraryState extends State<Library> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) =>
-                        AlbumPage(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                    builder: (_) => ChangeNotifierProvider(
+                      create: (_) {
+                        final controller = AlbumController();
+                        controller.callOnInit('1xJHno7SmdVtZAtXbdbDZp');
+                        return controller;
+                      },
+                      child: AlbumView(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                    ),
                   ),
                 );
               },

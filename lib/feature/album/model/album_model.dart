@@ -1,10 +1,10 @@
-class Album {
+class AlbumModel {
   final String name;
   final String imageUrl;
   final String artist;
   final String albumId;
   final List<String> tracks;
-  Album({
+  AlbumModel({
     required this.name,
     required this.imageUrl,
     required this.artist,
@@ -12,8 +12,8 @@ class Album {
     required this.tracks,
   });
 
-  factory Album.fromJson(Map<String, dynamic> json) {
-    return Album(
+  factory AlbumModel.fromJson(Map<String, dynamic> json) {
+    return AlbumModel(
       name: json['name'] ?? 'unknown artist',
       imageUrl: json['images'][0]['url'],
       artist: json['artists'][0]['name'],

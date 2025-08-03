@@ -1,10 +1,10 @@
-class Playlist {
+class PlaylistModel {
   final String name;
   final String imageUrl;
   final String owner;
   final String playlistId;
   final List<String> tracks;
-  Playlist({
+  PlaylistModel({
     required this.name,
     required this.imageUrl,
     required this.owner,
@@ -12,8 +12,8 @@ class Playlist {
     required this.tracks,
   });
 
-  factory Playlist.fromJson(Map<String, dynamic> json) {
-    return Playlist(
+  factory PlaylistModel.fromJson(Map<String, dynamic> json) {
+    return PlaylistModel(
       name: json['name'] ?? 'unknown artist',
       imageUrl: json['images'][0]['url'],
       owner: json['owner']['display_name'],

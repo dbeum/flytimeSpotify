@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flytime_spotify/feature/album/controller/album_controller.dart';
+import 'package:flytime_spotify/feature/playlist/controller/playlist_controller.dart';
 
-import 'package:flytime_spotify/playback/playback.dart';
+import 'package:flytime_spotify/feature/playlist/model/playlist_model.dart';
 import 'package:flytime_spotify/providers/download.dart';
 import 'package:flytime_spotify/providers/play.dart';
-import 'package:flytime_spotify/src/feature/album/controller/album_controller.dart';
-import 'package:flytime_spotify/src/feature/album/model/album_model.dart';
-import 'package:flytime_spotify/src/services/spotify_service.dart';
+import 'package:flytime_spotify/services/spotifyplaylist_service.dart';
 import 'package:palette_generator/palette_generator.dart';
 import 'package:provider/provider.dart';
 
-class AlbumView extends StatefulWidget {
-  final String albumId;
-  const AlbumView({super.key, required this.albumId});
+class PlaylistPage extends StatefulWidget {
+  final String playlistId;
+  const PlaylistPage({super.key, required this.playlistId});
 
   @override
-  State<AlbumView> createState() => _AlbumViewState();
+  State<PlaylistPage> createState() => _PlaylistPageState();
 }
 
-class _AlbumViewState extends State<AlbumView> {
+class _PlaylistPageState extends State<PlaylistPage> {
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      context.read<AlbumController>().calloninit(widget.albumId);
+      context.read<PlaylistController>();
     });
   }
 
@@ -30,18 +30,18 @@ class _AlbumViewState extends State<AlbumView> {
   Widget build(BuildContext context) {
     final provider = Provider.of<downloadProvider>(context);
     final play = Provider.of<PlayProvider>(context);
-    final controller = context.watch<AlbumController>();
+    final controller = context.watch<PlaylistController>();
 
     return Scaffold(
-      body: FutureBuilder<Album>(
-        future: controller.albumFuture,
+      body: FutureBuilder<PlaylistModel>(
+        future: controller.playlistFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text("Error: ${snapshot.error}"));
           } else if (snapshot.hasData) {
-            final album = snapshot.data!;
+            final playlist = snapshot.data!;
             return SingleChildScrollView(
               child: Column(
                 children: [
@@ -57,9 +57,9 @@ class _AlbumViewState extends State<AlbumView> {
                         colors: [
                           controller.topColor,
                           Color.fromARGB(255, 18, 18, 18),
-                        ], // Gradient colors
-                        begin: Alignment.topCenter, // Start point
-                        end: Alignment.bottomCenter, // End point
+                        ],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
                       ),
                     ),
                     child: Column(
@@ -81,14 +81,14 @@ class _AlbumViewState extends State<AlbumView> {
                             height: 200,
                             width: 200,
                             color: Colors.transparent,
-                            child: Image.network(album.imageUrl),
+                            child: Image.network(playlist.imageUrl),
                           ),
                         ),
                         SizedBox(height: 20),
                         Padding(
                           padding: EdgeInsets.only(left: 15),
                           child: Text(
-                            album.name,
+                            playlist.name,
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -99,9 +99,28 @@ class _AlbumViewState extends State<AlbumView> {
                         Row(
                           children: [
                             SizedBox(width: 15),
-
+                            Container(
+                              height: 20,
+                              width: 20,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(360),
+                                ),
+                                color: Colors.blue,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  'U',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 10,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10),
                             Text(
-                              album.artist,
+                              'User',
                               style: TextStyle(
                                 fontSize: 10,
                                 fontWeight: FontWeight.bold,
@@ -206,7 +225,7 @@ class _AlbumViewState extends State<AlbumView> {
                     padding: const EdgeInsets.only(top: 20, left: 1, right: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: album.tracks.map((track) {
+                      children: playlist.tracks.map((track) {
                         return ListTile(
                           title: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -224,12 +243,13 @@ class _AlbumViewState extends State<AlbumView> {
                                       style: TextStyle(color: Colors.white),
                                     ),
                                   ),
+
                                   Row(
                                     children: [
                                       Icon(Icons.explicit, size: 13),
                                       SizedBox(width: 2),
                                       Text(
-                                        album.artist,
+                                        playlist.name,
                                         style: const TextStyle(
                                           color: Colors.grey,
                                           fontSize: 13,
@@ -243,7 +263,9 @@ class _AlbumViewState extends State<AlbumView> {
                             ],
                           ),
 
-                          onTap: () {},
+                          onTap: () {
+                            print('Tapped on $track');
+                          },
                         );
                       }).toList(),
                     ),

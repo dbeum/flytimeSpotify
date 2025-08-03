@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/playback/playback.dart';
+import 'package:flytime_spotify/feature/playback/playback.dart';
 import 'package:flytime_spotify/providers/play.dart';
 import 'package:flytime_spotify/routing/home.dart';
 import 'package:flytime_spotify/routing/library.dart';
-import 'package:flytime_spotify/routing/search.dart';
+import 'package:flytime_spotify/feature/search/view/search_view.dart';
 import 'package:provider/provider.dart';
 
 class MainScaffold extends StatefulWidget {

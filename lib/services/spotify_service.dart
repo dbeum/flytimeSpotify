@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:flytime_spotify/src/feature/album/model/album_model.dart';
+import 'package:flytime_spotify/feature/album/model/album_model.dart';
 import 'package:http/http.dart' as http;
 
 class SpotifyService {
@@ -23,7 +23,7 @@ class SpotifyService {
     }
   }
 
-  Future<Album> fetchAlbumById(String albumId) async {
+  Future<AlbumModel> fetchAlbumById(String albumId) async {
     final token = await _getToken();
     final res = await http.get(
       Uri.parse('https://api.spotify.com/v1/albums/$albumId'),
@@ -33,7 +33,7 @@ class SpotifyService {
     if (res.statusCode == 200) {
       final albumJson = jsonDecode(res.body);
 
-      return Album.fromJson(albumJson);
+      return AlbumModel.fromJson(albumJson);
     } else {
       throw Exception('Failed to load album');
     }

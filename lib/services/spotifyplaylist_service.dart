@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:flytime_spotify/models/album.dart';
-import 'package:flytime_spotify/models/playlist.dart';
+
+import 'package:flytime_spotify/feature/playlist/model/playlist_model.dart';
 import 'package:http/http.dart' as http;
 
 class SpotifyService {
@@ -24,7 +24,7 @@ class SpotifyService {
     }
   }
 
-  Future<Playlist> fetchPlaylistById(String playlistId) async {
+  Future<PlaylistModel> fetchPlaylistById(String playlistId) async {
     final token = await _getToken();
     final res = await http.get(
       Uri.parse('https://api.spotify.com/v1/playlists/$playlistId'),
@@ -34,7 +34,7 @@ class SpotifyService {
     if (res.statusCode == 200) {
       final playlistJson = jsonDecode(res.body);
       print(jsonEncode(playlistJson));
-      return Playlist.fromJson(playlistJson);
+      return PlaylistModel.fromJson(playlistJson);
     } else {
       print('Failed to load playlist: ${res.statusCode}');
       print('Response body: ${res.body}');

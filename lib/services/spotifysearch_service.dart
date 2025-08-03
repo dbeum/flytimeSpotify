@@ -1,6 +1,7 @@
 import 'dart:convert';
-import 'package:flytime_spotify/models/album.dart';
-import 'package:flytime_spotify/models/artist.dart';
+
+import 'package:flytime_spotify/feature/artist/model/artist.dart';
+import 'package:flytime_spotify/feature/album/model/album_model.dart';
 import 'package:http/http.dart' as http;
 
 class SpotifyService {
@@ -24,7 +25,7 @@ class SpotifyService {
     }
   }
 
-  Future<Album> fetchAlbumById(String albumId) async {
+  Future<AlbumModel> fetchAlbumById(String albumId) async {
     final token = await _getToken();
     final res = await http.get(
       Uri.parse('https://api.spotify.com/v1/albums/$albumId'),
@@ -34,7 +35,7 @@ class SpotifyService {
     if (res.statusCode == 200) {
       final albumJson = jsonDecode(res.body);
       // print(jsonEncode(albumJson));
-      return Album.fromJson(albumJson);
+      return AlbumModel.fromJson(albumJson);
     } else {
       throw Exception('Failed to load album');
     }
@@ -56,7 +57,7 @@ class SpotifyService {
     }
   }
 
-  Future<List<Album>> searchAlbums(String query) async {
+  Future<List<AlbumModel>> searchAlbums(String query) async {
     final token = await _getToken();
     final res = await http.get(
       Uri.parse(
@@ -70,7 +71,7 @@ class SpotifyService {
       final albumsJson = jsonResult['albums']['items'] as List<dynamic>;
 
       return albumsJson.map((albumJson) {
-        return Album(
+        return AlbumModel(
           name: albumJson['name'] ?? 'Unknown',
           imageUrl:
               (albumJson['images'] != null && albumJson['images'].isNotEmpty)

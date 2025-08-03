@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/album/album.dart';
+import 'package:flytime_spotify/feature/album/view/album_view.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -93,7 +93,7 @@ class _ProfileState extends State<Profile> {
                 context,
                 MaterialPageRoute(
                   builder: (context) =>
-                      AlbumPage(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                      AlbumView(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
                 ),
               );
             },

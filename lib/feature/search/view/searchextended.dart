@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/src/feature/album/view/album_view.dart';
-import 'package:flytime_spotify/models/albumsearch.dart';
-import 'package:flytime_spotify/models/playlist.dart';
-import 'package:flytime_spotify/models/album.dart';
-import 'package:flytime_spotify/models/playlistsearch.dart';
-import 'package:flytime_spotify/src/services/spotifysearch_service.dart';
+import 'package:flytime_spotify/feature/album/controller/album_controller.dart';
+import 'package:flytime_spotify/feature/album/model/album_model.dart';
+import 'package:flytime_spotify/feature/album/view/album_view.dart';
+import 'package:flytime_spotify/feature/search/model/albumsearch_model.dart';
+import 'package:flytime_spotify/feature/playlist/model/playlist_model.dart';
+
+import 'package:flytime_spotify/services/spotifysearch_service.dart';
+import 'package:provider/provider.dart';
 
 class Searchextended extends StatefulWidget {
   const Searchextended({super.key});
@@ -15,7 +17,7 @@ class Searchextended extends StatefulWidget {
 
 class _SearchextendedState extends State<Searchextended> {
   final TextEditingController _controller = TextEditingController();
-  List<Album> _searchResults = [];
+  List<AlbumModel> _searchResults = [];
   bool _isLoading = false;
   String? _error;
 
@@ -137,7 +139,14 @@ class _SearchextendedState extends State<Searchextended> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => AlbumView(albumId: album.albumId),
+                            builder: (_) => ChangeNotifierProvider(
+                              create: (_) {
+                                final controller = AlbumController();
+                                controller.callOnInit(album.albumId);
+                                return controller;
+                              },
+                              child: AlbumView(albumId: album.albumId),
+                            ),
                           ),
                         );
                       },

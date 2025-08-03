@@ -3,9 +3,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
-import 'package:flytime_spotify/playback/playbackmore.dart';
-import 'package:flytime_spotify/playback/queue.dart';
-import 'package:flytime_spotify/playback/share.dart';
+import 'package:flytime_spotify/feature/playback/playbackmore.dart';
+import 'package:flytime_spotify/feature/playback/queue.dart';
+import 'package:flytime_spotify/feature/playback/share.dart';
 import 'package:flytime_spotify/providers/expand.dart';
 import 'package:flytime_spotify/providers/play.dart';
 import 'package:flytime_spotify/providers/shuffle.dart';

@@ -1,10 +1,13 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flytime_spotify/album/album.dart';
+import 'package:flytime_spotify/feature/album/controller/album_controller.dart';
+import 'package:flytime_spotify/feature/album/view/album_view.dart';
 import 'package:flytime_spotify/artist.dart';
-import 'package:flytime_spotify/playlist/playlist.dart';
+import 'package:flytime_spotify/feature/playlist/controller/playlist_controller.dart';
+import 'package:flytime_spotify/feature/playlist/view/playlist_view.dart';
 
 import 'package:flytime_spotify/routing/settings.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -66,8 +69,18 @@ class _HomeState extends State<Home> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  AlbumPage(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                              builder: (_) => ChangeNotifierProvider(
+                                create: (_) {
+                                  final controller = AlbumController();
+                                  controller.callOnInit(
+                                    '1xJHno7SmdVtZAtXbdbDZp',
+                                  );
+                                  return controller;
+                                },
+                                child: AlbumView(
+                                  albumId: '1xJHno7SmdVtZAtXbdbDZp',
+                                ),
+                              ),
                             ),
                           );
                         },
@@ -110,8 +123,17 @@ class _HomeState extends State<Home> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => PlaylistPage(
-                                playlistId: '6mv2k2DBxZ516Cqcw1IZQE',
+                              builder: (_) => ChangeNotifierProvider(
+                                create: (_) {
+                                  final controller = PlaylistController();
+                                  controller.callOnInit(
+                                    '6mv2k2DBxZ516Cqcw1IZQE',
+                                  );
+                                  return controller;
+                                },
+                                child: PlaylistPage(
+                                  playlistId: '6mv2k2DBxZ516Cqcw1IZQE',
+                                ),
                               ),
                             ),
                           );
@@ -163,8 +185,17 @@ class _HomeState extends State<Home> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => PlaylistPage(
-                                playlistId: '2EMEoIYwiPecwKa5tOPbZm',
+                              builder: (_) => ChangeNotifierProvider(
+                                create: (_) {
+                                  final controller = PlaylistController();
+                                  controller.callOnInit(
+                                    '2EMEoIYwiPecwKa5tOPbZm',
+                                  );
+                                  return controller;
+                                },
+                                child: PlaylistPage(
+                                  playlistId: '2EMEoIYwiPecwKa5tOPbZm',
+                                ),
                               ),
                             ),
                           );
@@ -212,8 +243,17 @@ class _HomeState extends State<Home> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => PlaylistPage(
-                                playlistId: '2Uow2rC2RpEw5AEjoYxrZc',
+                              builder: (_) => ChangeNotifierProvider(
+                                create: (_) {
+                                  final controller = PlaylistController();
+                                  controller.callOnInit(
+                                    '2Uow2rC2RpEw5AEjoYxrZc',
+                                  );
+                                  return controller;
+                                },
+                                child: PlaylistPage(
+                                  playlistId: '2Uow2rC2RpEw5AEjoYxrZc',
+                                ),
                               ),
                             ),
                           );
@@ -261,8 +301,18 @@ class _HomeState extends State<Home> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  AlbumPage(albumId: '5PKl5yyetQ6mFeWK6ONbSH'),
+                              builder: (_) => ChangeNotifierProvider(
+                                create: (_) {
+                                  final controller = AlbumController();
+                                  controller.callOnInit(
+                                    '5PKl5yyetQ6mFeWK6ONbSH',
+                                  );
+                                  return controller;
+                                },
+                                child: AlbumView(
+                                  albumId: '5PKl5yyetQ6mFeWK6ONbSH',
+                                ),
+                              ),
                             ),
                           );
                         },
@@ -378,8 +428,15 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PlaylistPage(
-                            playlistId: '6mv2k2DBxZ516Cqcw1IZQE',
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = PlaylistController();
+                              controller.callOnInit('6mv2k2DBxZ516Cqcw1IZQE');
+                              return controller;
+                            },
+                            child: PlaylistPage(
+                              playlistId: '6mv2k2DBxZ516Cqcw1IZQE',
+                            ),
                           ),
                         ),
                       );
@@ -399,8 +456,15 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PlaylistPage(
-                            playlistId: '2Uow2rC2RpEw5AEjoYxrZc',
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = PlaylistController();
+                              controller.callOnInit('2Uow2rC2RpEw5AEjoYxrZc');
+                              return controller;
+                            },
+                            child: PlaylistPage(
+                              playlistId: '2Uow2rC2RpEw5AEjoYxrZc',
+                            ),
                           ),
                         ),
                       );
@@ -431,8 +495,15 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PlaylistPage(
-                            playlistId: '2EMEoIYwiPecwKa5tOPbZm',
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = PlaylistController();
+                              controller.callOnInit('2EMEoIYwiPecwKa5tOPbZm');
+                              return controller;
+                            },
+                            child: PlaylistPage(
+                              playlistId: '2EMEoIYwiPecwKa5tOPbZm',
+                            ),
                           ),
                         ),
                       );
@@ -484,8 +555,14 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              AlbumPage(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = AlbumController();
+                              controller.callOnInit('1xJHno7SmdVtZAtXbdbDZp');
+                              return controller;
+                            },
+                            child: AlbumView(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                          ),
                         ),
                       );
                     },
@@ -504,8 +581,14 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              AlbumPage(albumId: '3SpBlxme9WbeQdI9kx7KAV'),
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = AlbumController();
+                              controller.callOnInit('3SpBlxme9WbeQdI9kx7KAV');
+                              return controller;
+                            },
+                            child: AlbumView(albumId: '3SpBlxme9WbeQdI9kx7KAV'),
+                          ),
                         ),
                       );
                     },
@@ -530,8 +613,14 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              AlbumPage(albumId: '277z75G1Gdz0SWN9pegrrs'),
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = AlbumController();
+                              controller.callOnInit('277z75G1Gdz0SWN9pegrrs');
+                              return controller;
+                            },
+                            child: AlbumView(albumId: '277z75G1Gdz0SWN9pegrrs'),
+                          ),
                         ),
                       );
                     },
@@ -550,8 +639,14 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              AlbumPage(albumId: '3tx8gQqWbGwqIGZHqDNrGe'),
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = AlbumController();
+                              controller.callOnInit('3tx8gQqWbGwqIGZHqDNrGe');
+                              return controller;
+                            },
+                            child: AlbumView(albumId: '3tx8gQqWbGwqIGZHqDNrGe'),
+                          ),
                         ),
                       );
                     },
@@ -605,8 +700,15 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PlaylistPage(
-                            playlistId: '2EMEoIYwiPecwKa5tOPbZm',
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = PlaylistController();
+                              controller.callOnInit('2EMEoIYwiPecwKa5tOPbZm');
+                              return controller;
+                            },
+                            child: PlaylistPage(
+                              playlistId: '2EMEoIYwiPecwKa5tOPbZm',
+                            ),
                           ),
                         ),
                       );
@@ -626,8 +728,14 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              AlbumPage(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = AlbumController();
+                              controller.callOnInit('1xJHno7SmdVtZAtXbdbDZp');
+                              return controller;
+                            },
+                            child: AlbumView(albumId: '1xJHno7SmdVtZAtXbdbDZp'),
+                          ),
                         ),
                       );
                     },
@@ -674,8 +782,15 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PlaylistPage(
-                            playlistId: '2Uow2rC2RpEw5AEjoYxrZc',
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = PlaylistController();
+                              controller.callOnInit('2Uow2rC2RpEw5AEjoYxrZc');
+                              return controller;
+                            },
+                            child: PlaylistPage(
+                              playlistId: '2Uow2rC2RpEw5AEjoYxrZc',
+                            ),
                           ),
                         ),
                       );
@@ -729,10 +844,17 @@ class _HomeState extends State<Home> {
                     onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) =>
-                            AlbumPage(albumId: '3TDqyvMmWlK34WpAxwG6hf'),
+                        builder: (_) => ChangeNotifierProvider(
+                          create: (_) {
+                            final controller = AlbumController();
+                            controller.callOnInit('3TDqyvMmWlK34WpAxwG6hf');
+                            return controller;
+                          },
+                          child: AlbumView(albumId: '3TDqyvMmWlK34WpAxwG6hf'),
+                        ),
                       ),
                     ),
+
                     child: Center(
                       child: Column(
                         children: [
@@ -751,8 +873,14 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              AlbumPage(albumId: '6e1McsPwHgiySHVlpZRhFx'),
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = AlbumController();
+                              controller.callOnInit('6e1McsPwHgiySHVlpZRhFx');
+                              return controller;
+                            },
+                            child: AlbumView(albumId: '6e1McsPwHgiySHVlpZRhFx'),
+                          ),
                         ),
                       );
                     },
@@ -774,8 +902,15 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PlaylistPage(
-                            playlistId: '5BaRk0mmuRfvfRgJjbgxfm',
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = PlaylistController();
+                              controller.callOnInit('5BaRk0mmuRfvfRgJjbgxfm');
+                              return controller;
+                            },
+                            child: PlaylistPage(
+                              playlistId: '5BaRk0mmuRfvfRgJjbgxfm',
+                            ),
                           ),
                         ),
                       );
@@ -799,8 +934,14 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              AlbumPage(albumId: '3Uo1dpUULgBeWEgjf5AMsd'),
+                          builder: (_) => ChangeNotifierProvider(
+                            create: (_) {
+                              final controller = AlbumController();
+                              controller.callOnInit('3Uo1dpUULgBeWEgjf5AMsd');
+                              return controller;
+                            },
+                            child: AlbumView(albumId: '3Uo1dpUULgBeWEgjf5AMsd'),
+                          ),
                         ),
                       );
                     },
